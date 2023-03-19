@@ -1,0 +1,33 @@
+html{
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+	font-size:1.2em;
+	line-height:1.5;
+}
+
+body{
+	color: #fff;
+	background-color: #333;
+}
+
+h1{
+	color: #fffa55;
+	font-size:3.5em;
+	line-height:1;
+	margin:0;
+}
+
+h2{
+	margin-top:2rem;
+}
+
+a{
+	color: #fffa55;
+}
+
+.main{
+    max-width: 40rem;
+    padding: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    /*background-color: #333;*/
+}
