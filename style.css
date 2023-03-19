@@ -31,3 +31,20 @@ a{
     margin-right: auto;
     /*background-color: #333;*/
 }
+
+.formrow{
+	padding:1em 0;
+}
+/**** form settings ****/
+input{
+	width:100%;
+	font-size:1.1em;
+}
+
+textarea{
+	width:100%;
+}
+
+button{
+	font-size:1.1em;
+}
