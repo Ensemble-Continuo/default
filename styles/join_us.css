@@ -1,0 +1,80 @@
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    opacity: 0; 
+    transition: opacity 1.5s; 
+}
+
+code {
+    background-color: black;
+}
+
+nav li {
+    margin: 0;
+    padding: 0 30px;
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.btn {
+    padding: .2rem .2rem;
+}
+
+.container {
+    background-color: white;
+    font-family: 'Palatino Linotype', Palatino, serif;
+}
+
+.container h1 {
+    text-align: center;
+}
+  
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.message {
+    width: 90%;
+}
+
+#link {
+    text-decoration: underline;
+    color: black;
+}
+
+#link:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+#link:visited {
+    text-decoration: none;
+}
+
+#maintext {
+    padding: 70px 0;
+}
+
+#shade {
+    text-shadow: 1.5px 1.5px red;
+    background-color: greenyellow;
+}

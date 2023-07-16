@@ -1,0 +1,65 @@
+/* source: https://codepen.io/maheshambure21/pen/QwXaRw */
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    opacity: 0; 
+    transition: opacity 1.5s;
+}
+
+.container {
+  font-family: 'Palatino Linotype', Palatino, serif;
+}
+
+nav .home li {
+  float: left;
+  padding: 0px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav .pages li {
+  margin: 0;
+  padding: 0 30px;
+  float: right;
+}
+
+
+/* NAVIGATION */
+nav ul li a {
+  text-decoration: none;
+  color: gray;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* STROKE */
+nav.stroke ul li a{
+  position: relative;
+}
+nav.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: black;
+  height: 2px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+

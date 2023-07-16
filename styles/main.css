@@ -1,0 +1,120 @@
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    opacity: 0; 
+    transition: opacity 1.5s; 
+}
+
+i {
+    color: black;
+    margin: 10px;
+}
+
+i:hover {
+    text-decoration: none;
+}
+
+img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.69);
+}
+
+nav li {
+    margin: 0;
+    padding: 0 30px;
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.button {
+    border-radius: 50%;
+}
+
+.container {
+    font-family: 'Palatino Linotype', Palatino, serif;
+}
+
+.jumbotron {
+    font-family: 'Palatino Linotype', Palatino, serif;
+    font-size: xx-small;
+    background-color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.parallax {
+    background-video: url('../images/launch.mp4');
+    background-image: url('../images/union church full choir.jpg');
+    height: 65vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    margin-top: -50px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: black;
+}
+
+.main {
+    text-align: center;
+    margin: 30px;
+    margin-top: 0px;
+}
+
+.title {
+    margin: 10px;
+}
+
+#email:hover {
+    color: #0072c6;
+}
+
+#facebook:hover {
+    color: #4267b2;
+}
+
+#github:hover {
+    color: #6e5494;
+}
+
+#headline {
+    color: gray;
+}
+
+#instagram:hover {
+    color: #c13584;
+}
+
+#linkedin:hover {
+    color: #0e76a8;
+}
+
+#youtube:hover {
+    color: #ff0000;
+}
