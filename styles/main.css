@@ -48,6 +48,10 @@ nav ul {
     list-style: none;
 }
 
+#rnb {
+    height: 60px;
+}
+
 .button {
     border-radius: 50%;
 }
