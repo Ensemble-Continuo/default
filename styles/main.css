@@ -29,13 +29,17 @@ i:hover {
     text-decoration: none;
 }
 
-img {
+img.logo {
     border-radius: 50%;
     width: 300px;
     height: 300px;
     margin-top: 50px;
     margin-bottom: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.69);
+}
+
+img.banner {
+    width: 100%;
 }
 
 nav li {
@@ -67,16 +71,16 @@ nav ul {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-
+/*
 .parallax {
     background-video: url('../images/launch.mp4');
     background-image: url('../images/union church full choir.jpg');
-    height: 65vh; 
+    height: 45vh; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+}*/
 
 .footer {
     margin-top: -50px;

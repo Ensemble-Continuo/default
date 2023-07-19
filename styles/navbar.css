@@ -8,7 +8,8 @@ body {
     transition: opacity 1.5s;
 }
 
-.container {
+.navcontainer {
+  max-width: 1000px;
   font-family: 'Palatino Linotype', Palatino, serif;
 }
 
