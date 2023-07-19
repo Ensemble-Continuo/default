@@ -9,7 +9,7 @@ body {
 }
 
 .navcontainer {
-  max-width: 1000px;
+  min-width: 840px;
   font-family: 'Palatino Linotype', Palatino, serif;
 }
 
