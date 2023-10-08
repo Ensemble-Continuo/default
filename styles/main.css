@@ -159,7 +159,7 @@ nav a:hover {
     top: 75px;
     left: 0;
     width: 100%;
-    height: 100vh;  /* full height of the viewport */
+    height: 80vh;  /* full height of the viewport */
     overflow: hidden;
     z-index: -1000; /* keep it in the background */
 }
