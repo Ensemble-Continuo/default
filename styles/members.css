@@ -39,12 +39,11 @@ nav ul {
     font-family: 'Palatino Linotype', Palatino, serif;
     text-align: center;
     position: absolute; /* Added */
-    top: 10%; /* Added - Adjust the percentage to set the container higher or lower */
-    left: 50%; /* Added - Center the container horizontally */
-    transform: translateX(-50%); /* Added - Ensure true centering by offsetting based on its own width */
-    width: 80%; /* Added/Adjust - You might want to set a max width or width */
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 80%; 
     opacity:75%
-    /* Additional properties for styling can be added/adjusted here */
 }
 
 .container h1 {
@@ -75,6 +74,18 @@ td {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+    .parallax {
+        height: 1000px; 
+        background-attachment: fixed;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    
 }
 
 #title {
