@@ -10,6 +10,7 @@ body {
 
 .navcontainer {
   min-width: 840px;
+  min-height: 50px;
   font-family: 'Palatino Linotype', Palatino, serif;
   background-color: white;
   opacity: 90%;
