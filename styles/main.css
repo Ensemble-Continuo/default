@@ -68,8 +68,9 @@ nav ul {
     font-family: 'Palatino Linotype', Palatino, serif;
     font-size: xx-small;
     background-color: white;
-    margin-top: 0px;
+    margin-top: 100;
     margin-bottom: 0px;
+    opacity: 70%;
 }
 /*
 .parallax {
@@ -87,7 +88,14 @@ nav ul {
     margin-bottom: 50px;
     text-align: center;
     color: black;
+    z-index: 5000;
+
 }
+
+.footer i {
+    opacity: 1 !important;  /* Ensure other styles aren't overriding this */
+}
+
 
 .main {
     text-align: center;
@@ -125,4 +133,31 @@ nav ul {
 
 #youtube:hover {
     color: #ff0000;
+}
+
+
+#videoBackground {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100vh;  /* full height of the viewport */
+    overflow: hidden;
+    z-index: -1000; /* keep it in the background */
+}
+
+#bgVideo {
+    object-fit: cover; /* cover entire viewport */
+    width: 100%;
+    height: 100%;
+}
+
+#instruction {
+    font-size: 14px; /* Adjust size as per your design */
+}
+
+#downArrow {
+    font-size: 32px;
+    display: block;
+    margin: 10px auto 0px auto;  /* Reducing space below the arrow */
 }

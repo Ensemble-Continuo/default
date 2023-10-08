@@ -31,36 +31,51 @@
         gtag('js', new Date());
         gtag('config', 'G-SLMVDHBTBP');
     </script>
+    <script>
+        function toggleMute() {
+            var video = document.getElementById("bgVideo");
+            var button = document.getElementById("muteButton");
+            
+            if (video.muted) {
+                video.muted = false;
+                button.innerHTML = "Mute";
+            } else {
+                video.muted = true;
+                button.innerHTML = "Unmute";
+            }
+        }
+    </script>
 </head>
 
 <body onload="document.body.style.opacity='1'">
     <div id="rnb"></div>
     <!-- <div class="parallax"></div> -->
-    <img src="images/union church full choir.jpg" class="banner" alt="Ensemble Continuo">
+    <div id="videoBackground">
+        <video autoplay muted loop id="bgVideo" onclick="toggleMute()">
+            <source src="videos/earth song.webm" type="video/webm">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
     <div class="jumbotron">
         <div class="main">
             <h2 class="title"><b>ENSEMBLE CONTINUO</b></h2>
-            <h3 id="headline">We are a classical community choir based in Mountain View, California</h3>
-            <img src="images/note logo.png" class="logo" alt="Logo">
+            <h3 id="headline">We are a classical chamber choir based in Mountain View, California.</h3>
+                <a href="https://www.instagram.com/ensemblecontinuo/" target="_blank">
+                    <i id="instagram" class="fab fa-instagram fa-3x"></i>
+                </a>
+                <a href="https://www.youtube.com/@ensemblecontinuo468" target="_blank">
+                    <i id="youtube" class="fab fa-youtube fa-3x"></i>
+                </a>
+                <a href="https://www.facebook.com/people/Ensemble-Continuo-Mountain-View/100091858361612/" target="_blank">
+                    <i id="facebook" class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a href="pages/join_us.html">
+                    <i id="email" class="fas fa-envelope fa-3x"></i>
+                </a>
             <br/>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ii3sdyxaSp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <!-- <iframe src="https://www.youtube.com/embed/ii3sdyxaSp8"> -->
-            </iframe>
+            <h4 id="instruction">Click the video below to hear us sing Ticheli - Earth Song at Stanford Memorial Church in July 2023</h4>
         </div>
-    </div>
-    <div class="footer">
-        <a href="https://www.instagram.com/ensemblecontinuo/" target="_blank">
-            <i id="instagram" class="fab fa-instagram fa-3x"></i>
-        </a>
-        <a href="https://www.youtube.com/@ensemblecontinuo468" target="_blank">
-            <i id="youtube" class="fab fa-youtube fa-3x"></i>
-        </a>
-        <a href="https://www.facebook.com/people/Ensemble-Continuo-Mountain-View/100091858361612/" target="_blank">
-            <i id="facebook" class="fab fa-facebook fa-3x"></i>
-        </a>
-        <a href="pages/join_us.html">
-            <i id="email" class="fas fa-envelope fa-3x"></i>
-        </a>
+        
     </div>
     <!-- <div class="parallax"></div> -->
 </body>
