@@ -38,6 +38,13 @@ nav ul {
     background-color: white;
     font-family: 'Palatino Linotype', Palatino, serif;
     text-align: center;
+    position: absolute; /* Added */
+    top: 10%; /* Added - Adjust the percentage to set the container higher or lower */
+    left: 50%; /* Added - Center the container horizontally */
+    transform: translateX(-50%); /* Added - Ensure true centering by offsetting based on its own width */
+    width: 80%; /* Added/Adjust - You might want to set a max width or width */
+    opacity:75%
+    /* Additional properties for styling can be added/adjusted here */
 }
 
 .container h1 {
