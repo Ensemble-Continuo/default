@@ -60,12 +60,12 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: gray;
+    color: black;
 }
 
 nav a:hover {
     text-decoration: none;
-    color: black;
+    color: darkred;
 }
 
 
@@ -122,6 +122,7 @@ nav a:hover {
 
 .title {
     margin: 10px;
+    z-index: 2000;
 }
 
 #email:hover {
