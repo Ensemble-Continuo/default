@@ -42,15 +42,32 @@ img.banner {
     width: 100%;
 }
 
+nav ul {
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 10px 0;  
+    position: fixed; 
+    width: 100%;  
+    top: 0; 
+    z-index: 1000;
+}
+
 nav li {
     margin: 0;
     padding: 0 30px;
     float: right;
 }
 
-nav ul {
-    list-style: none;
+nav a {
+    text-decoration: none;
+    color: gray;
 }
+
+nav a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 
 #rnb {
     height: 60px;
