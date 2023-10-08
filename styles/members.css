@@ -38,6 +38,7 @@ nav ul {
     background-color: white;
     font-family: 'Palatino Linotype', Palatino, serif;
     text-align: center;
+    opacity: 80%;
 }
 
 .container h1 {

@@ -12,12 +12,13 @@ body {
   min-width: 840px;
   font-family: 'Palatino Linotype', Palatino, serif;
   background-color: white;
-  opacity: 70%;
+  opacity: 90%;
 }
 
 nav .home li {
   float: left;
   padding: 0px;
+  z-index: 6000;
 }
 
 nav ul {
