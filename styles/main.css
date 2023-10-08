@@ -87,7 +87,7 @@ nav a:hover {
     background-color: white;
     margin-top: 100;
     margin-bottom: 0px;
-    opacity: 80%;
+    opacity: 95%;
 }
 /*
 .parallax {
@@ -159,9 +159,9 @@ nav a:hover {
     top: 75px;
     left: 0;
     width: 100%;
-    height: 80vh;  /* full height of the viewport */
+    height: 80vh;  
     overflow: hidden;
-    z-index: -1000; /* keep it in the background */
+    z-index: -1000;
 }
 
 #bgVideo {
@@ -172,10 +172,4 @@ nav a:hover {
 
 #instruction {
     font-size: 14px; /* Adjust size as per your design */
-}
-
-#downArrow {
-    font-size: 32px;
-    display: block;
-    margin: 10px auto 0px auto;  /* Reducing space below the arrow */
 }
