@@ -87,6 +87,7 @@ nav a:hover {
     background-color: white;
     margin-top: 100;
     margin-bottom: 0px;
+    padding-bottom: 1px;
     opacity: 95%;
 }
 /*
@@ -171,5 +172,6 @@ nav a:hover {
 }
 
 #instruction {
+    margin-top: 20px;
     font-size: 14px; /* Adjust size as per your design */
 }
