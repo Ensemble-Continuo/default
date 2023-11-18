@@ -8,3 +8,4 @@ Libraries:
 - jQuery
 - Popper
 - Anime.js
+- Edition Peters - Ein Deutsches Requiem Op. 45 (German Edition)
