@@ -154,6 +154,9 @@ nav a:hover {
     color: #ff0000;
 }
 
+#mailchimp:hover {
+    color: #dda960;
+}
 
 #videoBackground {
     position: fixed;
