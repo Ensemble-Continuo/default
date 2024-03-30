@@ -19,6 +19,7 @@ body {
 nav .home li {
   float: left;
   padding: 0px;
+  padding-right: 5px;
   z-index: 6000;
 }
 
