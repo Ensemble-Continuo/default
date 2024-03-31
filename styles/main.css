@@ -45,7 +45,8 @@ img.banner {
 nav ul {
     list-style: none;
     background-color: rgba(255, 255, 255, 0.7); 
-    padding: 10px 0;  
+    padding-left: 40px;
+    padding-top: 15px;
     position: fixed; 
     width: 100%;  
     top: 0; 
