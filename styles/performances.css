@@ -35,6 +35,7 @@ h2 {
 }
 
 form {
+    margin-top: -40px;
     text-align: center;
     padding-top: 10px;
     border-radius: 10px;
@@ -63,6 +64,24 @@ form {
 
 .container h1 {
     text-align: center;
+}
+
+/* container */
+.responsive-two-columns {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+/* columns */
+.responsive-two-columns > * {
+    width:100%;
+}
+
+/* tablet breakpoint */
+@media (min-width:768px) {
+    .responsive-two-columns > * {
+        width:50%;
+    }
 }
 
 #link {
