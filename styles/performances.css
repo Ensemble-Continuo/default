@@ -57,6 +57,10 @@ form {
     cursor: default;
 }
 
+.column {
+    padding-bottom:15px;
+}
+
 .container {
     background-color: white;
     font-family: 'Palatino Linotype', Palatino, serif;
@@ -81,6 +85,9 @@ form {
 @media (min-width:768px) {
     .responsive-two-columns > * {
         width:50%;
+    }
+    .column {
+        padding-bottom:0px;
     }
 }
 
