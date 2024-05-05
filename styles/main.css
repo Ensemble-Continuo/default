@@ -120,6 +120,20 @@ nav a:hover {
     text-align: center;
     margin: 30px;
     margin-top: 0px;
+
+}
+
+.toast {
+    font-family: 'Palatino Linotype', Palatino, serif;
+    margin: .8rem;
+}
+
+.alert-link {
+    color: #3D8294;
+}
+
+.alert-link:hover {
+    color: #17a2b8;
 }
 
 .title {
