@@ -1,0 +1,88 @@
+
+[
+  {
+    "title": "Britten - A Ceremony of Carols",
+    "imgUrl": "../images/2411_Ceremony_of_Carols.png",
+    "date": "November 22, 2024 8:00 pm",
+    "location": "All Saints Episcopal Church",
+    "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
+    "description": "Ensemble Continuo performs Britten A Ceremony of Carols and a journey through Baroque motets.",
+    "ticketsUrl": "https://www.eventbrite.com/e/britten-a-ceremony-of-carols-tickets-1045064795937?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+  },
+  {
+    "title": "Christ Church Portola Valley & Woodside",
+    "imgUrl": "../images/2410_ec_woodside_crop.png",
+    "date": "Oct 11, 2024 7:30 PM",
+    "location": "Christ Church Portola Valley & Woodside",
+    "locationUrl": "https://www.ccpvw.org/",
+    "description": "Excepts from Britten's A Ceremony of Carols with works by Bach, Schütz, and others.<br/><br/>Free admission"
+  },
+  {
+    "title": "Stanford Sacred Summer Music Series",
+    "imgUrl": "../images/arches%20crop.jpg",
+    "date": "Jun 30, 2024 11:00 am",
+    "location": "Stanford Memorial Church",
+    "locationUrl": "https://orsl.stanford.edu/university-public-worship",
+    "description": "Chilcott's Little Jazz Mass, and works by Ešenvalds, Lili Boulanger, and Duruflé. Featuring our children's choir for the very first time."
+  },
+  {
+    "title": "Duruflé Requiem",
+    "imgUrl": "../images/durufle_poster.png",
+    "date": "May 24, 2024 8:00 pm",
+    "location": "Cathedral of Christ the Light, Oakland",
+    "locationUrl": "https://maps.app.goo.gl/amXJsd3UeoXW5NY99",
+    "description": "Featuring organist David Jonies of Holy Name Cathedral in Chicago."
+  },
+  {
+    "title": "Duruflé Requiem at Episcopal Church of the Incarnation",
+    "imgUrl": "../images/2404-Durufle_Incarnation.png",
+    "date": "Apr 27, 2024 7:30 pm",
+    "location": "Episcopal Church of the Incarnation, San Francisco",
+    "locationUrl": "https://maps.app.goo.gl/ivT7SA7ccFxuLxWw8",
+    "description": "Performance of selections from the Duruflé Requiem at Episcopal Church of the Incarnation"
+  },
+  {
+    "title": "Duruflé Requiem at St Ambrose Church",
+    "imgUrl": "../images/cal_theater.png",
+    "date": "Mar 23, 2024 8:00 pm",
+    "location": "St Ambrose Church, Foster City",
+    "locationUrl": "https://maps.app.goo.gl/vtAf3CorCv3DJJMq6",
+    "description": "Performance of selections from the Duruflé Requiem at St Ambrose Church"
+  },
+  {
+    "title": "Christmas in the Park",
+    "imgUrl": "../images/christmas%20in%20the%20park%20crop.jpg",
+    "date": "Dec 17, 2023 1:30 pm",
+    "location": "Plaza de Cesar Chavez, San Jose",
+    "description": "Holiday classics from <i>Adeste Fideles</i> to <i>We Wish You a Merry Christmas</i>."
+  },
+  {
+    "title": "Festive Holiday Concert",
+    "imgUrl": "../images/stars%20episcopal%20church%20crop.jpg",
+    "date": "Dec 9, 2023 2:00 pm",
+    "location": "Episcopal Church of the Incarnation, San Francisco",
+    "concertProgramUrl": "../files/2023%20holiday%20concert%20program.pdf"
+  },
+  {
+    "title": "6th International Performing Arts of America Festival",
+    "imgUrl": "../images/california_curtain_call_thumbnail.jpg",
+    "date": "Oct 8, 2023 7:00 pm",
+    "location": "California Theatre, San Jose",
+    "description": "A joint performance with <a href='http://www.intperformingarts.org/' target='_blank'>International Performing Arts of America</a> featuring <i>Stars</i> by Ēriks Ešenvalds and <i>Jai Ho</i> by A. R. Rahman."
+  },
+  {
+    "title": "Stanford Sacred Music Series",
+    "imgUrl": "../images/stanford%20thumbnail.jpg",
+    "date": "July 2, 2023",
+    "location": "Stanford Memorial Church",
+    "description": "A cappella motets including Ticheli's <i>Earth Song</i>, Mendelssohn's <i>Jauchzet dem Herrn</i>, and <i>Finzi's My spirit sang all day</i>.",
+    "concertProgramUrl": "../files/stanford%20upw%20bulletin.pdf"
+  },
+  {
+    "title": "Brahms Requiem",
+    "imgUrl": "../images/brahms%20thumbnail.jpg",
+    "date": "May 20, 2023",
+    "location": "Union Church of Cupertino",
+    "description": "In our first ever public concert, we sang Brahms Requiem for choir and piano 4-hands."
+  }
+]
