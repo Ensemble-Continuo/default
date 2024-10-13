@@ -1,6 +1,7 @@
 let performances = [];
 let error=false;
 
+/** Generates pop up showing the latest performance. Intended for use on home page. */
 window.generatePopup = async function(){
     await loadPerfs();
     if(error){
@@ -30,6 +31,7 @@ window.generatePopup = async function(){
   $('.toast').toast('show');
 }
 
+/** Generate list of performances for the performances page, drawing from JSON */
 window.renderPerformances = async function(){
     await loadPerfs();
     if(error){
@@ -49,7 +51,6 @@ window.renderPerformances = async function(){
     }
     for(let k=0; k<upcomingPerfs.length; k++)
     {
-        console.log('appending ' + upcomingPerfs[k].title)
         if(!row || k % 2 === 0){
             row = getRow();
             upDiv.appendChild(row);
@@ -62,7 +63,6 @@ window.renderPerformances = async function(){
     const ppDiv=document.getElementById('past_perfs');
     for(let k=0; k<pastPerfs.length; k++)
     {
-        console.log('past appending ' + pastPerfs[k].title);
         if(!row || k % 2 === 0){
             row = getRow();
             ppDiv.appendChild(row);
@@ -153,7 +153,7 @@ async function loadPerfs(){
             if(!perf.imgUrl){
                 addError('No img url provided!');
             }
-            const parsedDate = new Date(perf.date);
+            const parsedDate = new Date(perf.date + " PST");
             if(isNaN(parsedDate)){
                 addError(`Date format incorrect: ${perf.date}. We expect a date with a format like "May 25, 2024 8:00 pm"`);
             }
