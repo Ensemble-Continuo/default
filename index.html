@@ -53,9 +53,16 @@
     <script id="mcjs">
         !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/fdf6765d2687403e924ccc48f/538c36d8f6cc0f4bfb0dd8157.js");
     </script>
+    <script type="module" src="scripts/perfReader.js"></script>
 </head>
 
 <body onload="document.body.style.opacity='1'">
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await window.generatePopup();
+        });
+    </script>
+
     <div id="rnb"></div>
     <!-- <div class="parallax"></div> -->
     <div id="videoBackground">
@@ -91,26 +98,6 @@
         </div>
     </div>
 
-    <!--Using this toast for one-off announcements like big concerts-->
-    <div class="toast float-left" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" data-animation="true">
-      <div class="toast-header bg-info text-white">
-        Next concert: &nbsp
-        <strong class="mr-auto">Christ Church Portola Valley & Woodside</strong> 
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="toast-body">
-          Oct 11th, 2024 at 7:30 pm. Free admission!
-      </div>
-    </div>
-
     <!-- <div class="parallax"></div> -->
 </body>
-<script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-      $('.toast').toast('show');
-    })
-</script>
 </html>

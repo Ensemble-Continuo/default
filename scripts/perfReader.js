@@ -76,8 +76,15 @@ function getCard(performance){
    
     const innerCard = htmlToNode('<div class="card h-100"></div>');
    
-    const img = htmlToNode(`<img src="${performance.imgUrl}" class="card-img-top" alt="#">`);
-    innerCard.appendChild(img);
+    const img = htmlToNode(`<img src="${performance.imgUrl}" class="card-img-top" alt="#" />`);
+    if(performance.ticketsUrl){
+        const imgLink = htmlToNode(`<a href="${performance.ticketsUrl}" target="_blank"></a>`);
+        imgLink.appendChild(img);
+        innerCard.appendChild(imgLink);
+    }
+    else{
+        innerCard.appendChild(img);
+    }
 
     const cardBody = htmlToNode(`<div class="card-body"></div>`);
     
