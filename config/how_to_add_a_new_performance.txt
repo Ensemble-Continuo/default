@@ -1,0 +1,32 @@
+Part 1: generating the header image
+
+1) Open pixlr at https://pixlr.com/editor/
+2) Click "create new"
+3) In the right column, enter the desired dimensions of 502x283
+4) Click "Create"
+5) Paste the image you want to use into the editor
+6) Scale the image by clicking on it and holding down ctrl to constrain the dimensions
+7) Go to file -> export -> quick export as a png
+8) Save the file YYMM_<Performance name>.png (with underscores instead of spaces) to the images directory
+
+Part 2: Entering the JSON
+- Update the JSON below with concert details. Take note of the date format.
+- Add option fields
+  - concertProgramUrl: adds a link to the program in the description
+  - locationUrl: not required but recommended. Link to Google Maps or a website for the venue.
+  - ticketsUrl: not required but strongly recommended
+
+  {
+    "title": "Britten - A Ceremony of Carols",
+    "imgUrl": "../images/2411_Ceremony_of_Carols.png",
+    "date": "November 22, 2024 8:00 pm",
+    "location": "All Saints Episcopal Church",
+    "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
+    "description": "Ensemble Continuo performs Britten A Ceremony of Carols and a journey through Baroque motets.",
+    "ticketsUrl": "https://www.eventbrite.com/e/britten-a-ceremony-of-carols-tickets-1045064795937?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+  },
+  
+Part 3: verifying your changes
+
+- Launch the website with a lightweight local webserver and verify everything looks good
+- Note the index.html page draws a toast notification from the performances JSON, so check that too.

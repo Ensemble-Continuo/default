@@ -10,7 +10,7 @@ body {
 
 .navcontainer {
   min-width: 840px;
-  min-height: 50px;
+  height:100%;
   font-family: 'Palatino Linotype', Palatino, serif;
   background-color: white;
   opacity: 90%;
@@ -33,17 +33,18 @@ nav .pages li {
   float: right;
 }
 
-
 /* NAVIGATION */
 nav ul li a {
   text-decoration: none;
   color: gray;
 }
+
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
   transition: all .5s;
 }
+
 nav ul li a:hover {
   color: black;
   text-decoration: none;
@@ -53,6 +54,7 @@ nav ul li a:hover {
 nav.stroke ul li a{
   position: relative;
 }
+
 nav.stroke ul li a:after {
   position: absolute;
   bottom: 0;
@@ -69,3 +71,40 @@ nav.stroke ul li a:hover:after {
   width: 100%;
 }
 
+nav ul {
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-left: 40px;
+  padding-top: 15px;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav li {
+  margin: 0;
+  padding: 0 30px;
+  float: right;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: darkred;
+}
+
+
+#rnb {
+  height: 65px;
+}
+
+#header_logo{
+  float: left;
+  padding-left: 30px;
+  padding-top: auto;
+  padding-bottom: auto;
+}
