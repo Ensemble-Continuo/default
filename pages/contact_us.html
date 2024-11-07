@@ -34,7 +34,34 @@
 
 <body onload="document.body.style.opacity='1'">
     <div id="rnb"></div>
-    <iframe style="position:fixed; top:70px; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" src="https://docs.google.com/forms/d/e/1FAIpQLSdqDqxM3iXYNbcVvUYrj1pCg2vC72FMywElksUlBvQ-oKJYHQ/viewform?embedded=true">Loading…</iframe>
+    <div id="maintext" class="container">
+        <h1>Contact us</h1>
+        <hr>
+        <p>
+            Use this form to contact Ensemble Continuo. We love feedback from audience members!
+        </p>
+        <p>
+            Note: if you are interested in joining the choir, please visit the <a href="join_us.html">join us</a> page.
+        </p>
+
+        <form action="https://formspree.io/f/xeqwlood" method="POST">
+            <div class="formrow">
+                <label>Your email:<br/>
+                <input type="email" name="email" required size="50">
+                </label>
+            </div>
+            <div class="formrow">
+                <label class="message">
+                Your message: <br/>
+                <textarea name="message" class="message" rows=7></textarea>
+                </label>
+            </div>
+            <div class="formrow">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+            
+    </div>
 </body>
 
 </html>

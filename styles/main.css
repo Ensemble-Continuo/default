@@ -160,3 +160,13 @@ img.banner {
     margin-top: 20px;
     font-size: 14px; /* Adjust size as per your design */
 }
+
+.fullscreen-iframe {
+    position: fixed; /* Fix the iframe to the viewport */
+    top: 0;          /* Align to the top */
+    left: 0;         /* Align to the left */
+    width: 100vw;    /* Full viewport width */
+    height: 100vh;   /* Full viewport height */
+    border: none;    /* Remove border for a cleaner look */
+    z-index: 9999;   /* Ensures the iframe stays on top of other elements */
+}
