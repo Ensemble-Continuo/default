@@ -153,7 +153,7 @@ async function loadPerfs(){
             if(!perf.imgUrl){
                 addError('No img url provided!');
             }
-            const parsedDate = new Date(perf.date + " PST");
+            const parsedDate = new Date(perf.date);
             if(isNaN(parsedDate)){
                 addError(`Date format incorrect: ${perf.date}. We expect a date with a format like "May 25, 2024 8:00 pm"`);
             }

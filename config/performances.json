@@ -1,6 +1,14 @@
 
 [
   {
+    "title": "Christ Church Portola Valley & Woodside",
+    "imgUrl": "../images/portola.png",
+    "date": "March 15, 2025 7:00 PM",
+    "location": "Christ Church Portola Valley & Woodside",
+    "locationUrl": "https://www.ccpvw.org/",
+    "description": "Bernstein's Chichester Psalms with works by Essenvalds, Shaw, and Boulanger<br/><br/>Free admission"
+  },
+  {
     "title": "Messiah Sing Along",
     "imgUrl": "../images/2412_messiah_sing_along.png",
     "date": "December 13, 2024 7:30 pm",
