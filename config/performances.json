@@ -1,6 +1,14 @@
 
 [
   {
+    "title": "Poulenc and Bernstein in Chicago",
+    "imgUrl": "../images/2506_chicago.png",
+    "date": "June 14, 2025 7:00 PM",
+    "location": "Holy Name Cathedral, Chicago",
+    "locationUrl": "https://holynamecathedral.org/upcoming-events/summer-concert",
+    "description": "Ensemble Continuo embarks on its first-ever tour and performs its Poulenc-Bernstein program for a fourth and final time with organist David Jonies.",
+  },
+  {
     "title": "Bernstein Chichester Psalms and Poulenc Gloria",
     "imgUrl": "../images/2505_poulenc_bernstein.png",
     "date": "May 31, 2025 3:00 PM",
@@ -10,7 +18,7 @@
     "ticketsUrl": "https://www.eventbrite.com/e/bernstein-chichester-psalms-and-poulenc-gloria-tickets-1324677749809?aff=ecweb"
   },
   {
-    "title": "Poulenc - Gloria",
+    "title": "Poulenc Gloria",
     "imgUrl": "../images/2505_poulenc_gloria.png",
     "date": "May 10, 2025 3:00 pm",
     "location": "All Saints Episcopal Church",
