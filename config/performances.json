@@ -1,6 +1,38 @@
 
 [
   {
+    "title": "Second Annual Messiah Sing-Along",
+    "imgUrl": "../images/stars%20episcopal%20church%20crop.jpg",
+    "date": "December 19, 2025 6:30 pm",
+    "location": "All Saints Episcopal Church",
+    "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
+    "description": "Bring your Messiah score and sing along!"
+  },
+  {
+    "title": "Ensemble Continuo Holiday Concert 2025",
+    "imgUrl": "../images/christmas%20in%20the%20park%20crop.jpg",
+    "date": "December 12, 2025 7:00 pm",
+    "location": "All Saints Episcopal Church",
+    "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
+    "description": ""
+  },
+  {
+    "title": "Ensemble Continuo @ First Friday",
+    "imgUrl": "../images/ec_chicago.png",
+    "date": "November 7, 2025 6:30 pm",
+    "location": "All Saints Episcopal Church",
+    "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
+    "description": "First Friday music series at All Saints' Episcopal Church with atmospheric motets performed by Ensemble Continuo"
+  },
+  {
+    "title": "2025 Fall Concert",
+    "imgUrl": "../images/2501_fall.png",
+    "date": "September 27, 2025 7:30 pm",
+    "location": "All Saints Episcopal Church",
+    "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
+    "description": "Ensemble Continuo joins the Sudo Chorus for an evening of choral music"
+  },
+  {
     "title": "Poulenc and Bernstein in Chicago",
     "imgUrl": "../images/2506_chicago.png",
     "date": "June 14, 2025 7:00 PM",

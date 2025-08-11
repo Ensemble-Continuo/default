@@ -41,7 +41,8 @@ window.renderPerformances = async function(){
 
     // Upcoming performances
     let row; 
-    const upcomingPerfs = performances.filter(p=>isUpcoming(p));
+    // Want the latest upcoming performance first
+    const upcomingPerfs = performances.filter(p=>isUpcoming(p)).sort((p1, p2) => p1.date - p2.date);;
     const upDiv = document.getElementById('upcoming_perfs');
 
     if(upcomingPerfs.length === 0){
