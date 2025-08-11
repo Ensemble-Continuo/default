@@ -116,3 +116,7 @@ form {
 #facebook:hover {
     color: #4267b2;
 }
+
+#historical_perfs li{
+  padding:0.5em;
+}

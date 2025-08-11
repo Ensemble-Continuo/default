@@ -42,8 +42,6 @@ window.renderPerformances = async function(){
     // Upcoming performances
     let row; 
     const upcomingPerfs = performances.filter(p=>isUpcoming(p));
-    console.log("Upcoming performances");
-    console.log(upcomingPerfs);
     const upDiv = document.getElementById('upcoming_perfs');
 
     if(upcomingPerfs.length === 0){
@@ -59,7 +57,7 @@ window.renderPerformances = async function(){
     }
     
     // Past performances
-    const pastPerfs = performances.filter(p=>!isUpcoming(p));
+    const pastPerfs = performances.filter(p=>!isUpcoming(p) && !isHistorical(p));
     const ppDiv=document.getElementById('past_perfs');
     for(let k=0; k<pastPerfs.length; k++)
     {
@@ -68,6 +66,14 @@ window.renderPerformances = async function(){
             ppDiv.appendChild(row);
         }
         row.appendChild(getCard(pastPerfs[k]));
+    }
+    
+    const historicalPerfs = performances.filter(p=>!isUpcoming(p) && isHistorical(p));
+    const hpDiv = document.getElementById('historical_perfs');
+    for(let k=0; k<historicalPerfs.length; k++)
+    {
+        const histLi = getPerfLi(historicalPerfs[k]);
+        hpDiv.appendChild(histLi);
     }
 }
 
@@ -116,6 +122,12 @@ function getCard(performance){
     return card;
 }
 
+function getPerfLi(performance){
+    let programText = performance.concertProgramUrl ? `Read the <a href="${performance.concertProgramUrl}" target="_blank">concert program.</a>` : '';
+    const desc = performance.description ? performance.description + ' ' : '';
+    return htmlToNode(`<li><b>${performance.title}</b> - ${formatDate(performance.date)} at ${performance.location}. ${desc}${programText}</li>`);
+}
+
 function getRow(){
     return htmlToNode(`<div class="row row-cols-1 row-cols-md-2 card-deck"></div>`);
 }
@@ -139,6 +151,11 @@ function htmlToNode(html) {
 function isUpcoming(performance){
     const gracePeriod = 6 * 60 * 60 * 1000; // 6 hours
     return performance.date.getTime() + gracePeriod - new Date().getTime() > 0
+}
+
+function isHistorical(performance){
+    const oneYear = 500 * 24 * 60 * 60 * 1000; // 500 days. For some reason 500 days feels right.
+    return new Date().getTime() - oneYear > performance.date.getTime();
 }
 
 async function loadPerfs(){
@@ -165,7 +182,6 @@ async function loadPerfs(){
         }
     }
     const perf2 = performances.sort((p1, p2) => p2.date - p1.date);
-    console.log(perf2);
 }
 
 
