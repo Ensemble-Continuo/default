@@ -14,7 +14,7 @@ window.generatePopup = async function(){
     const nextPerf = upcomingPerfs[upcomingPerfs.length-1];
 
     const popup=htmlToNode('<div style="z-index:999" class="toast float-left fade show" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" data-animation="true"></div>');
-    popup.innerHTML=`<div class="toast-header bg-info text-white">
+    popup.innerHTML=`<div class="toast-header next-show-header">
     Next concert: &nbsp
     <strong class="mr-auto"><a style="color: #333" href="pages/performances.html">${nextPerf.title}</a></strong> 
     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">

@@ -39,14 +39,14 @@
     <script>
         function toggleMute() {
             var video = document.getElementById("bgVideo");
-            var button = document.getElementById("muteButton");
+            //var button = document.getElementById("muteButton");
             
             if (video.muted) {
                 video.muted = false;
-                button.innerHTML = "Mute";
+                //button.innerHTML = "Mute";
             } else {
                 video.muted = true;
-                button.innerHTML = "Unmute";
+                //button.innerHTML = "Unmute";
             }
         }
     </script>
@@ -65,13 +65,7 @@
 
     <div id="rnb"></div>
     <!-- <div class="parallax"></div> -->
-    <div id="videoBackground">
-        <video autoplay muted loop id="bgVideo" onclick="toggleMute()">
-            <source src="videos/earth song.webm" type="video/webm">
-            Your browser does not support HTML5 video.
-        </video>
-    </div>
-    <div class="jumbotron">
+    <div class="index-header">
         <div class="main">
             <h2 class="title"><b>ENSEMBLE CONTINUO</b></h2>
             <h3 id="headline">We are a classical chamber choir based in Palo Alto, California. </h3>
@@ -88,14 +82,20 @@
                 <i id="mailchimp" class="fa fa-envelope fa-3x" data-toggle="tooltip" data-placement="bottom"  title="Subscribe to our mailing list"></i>
             </a>
             <a>
-            <a href="pages/join_us.html">
+            <a href="pages/contact_us.html">
                 <i id="email" class="fas fa-reply fa-3x" data-toggle="tooltip" data-placement="bottom" title="Contact us"></i>
             </a>
             <br/>
             <h4 id="instruction">
-            Click below to hear Frank Ticheli's Earth Song. Full recording on <a href="https://www.youtube.com/watch?v=oIpcmuQH59U" target="_blank">YouTube</a>.<br>
+            Click below to hear And The Swallow by Caroline Shaw. Full recording on <a href="https://www.youtube.com/watch?v=IfXHkO8XKhQ" target="_blank">YouTube</a>.<br>
             </h4>
         </div>
+    </div>
+    <div id="videoBackground">
+        <video id="bgVideo" autoplay muted playsinline loop preload="auto" poster="/images/and_the_swallow_cover.png" onclick="toggleMute()">
+          <source src="/videos/and_the_swallow.webm" type="video/webm">
+          Your browser does not support HTML5 video.
+        </video>
     </div>
 
     <!-- <div class="parallax"></div> -->
