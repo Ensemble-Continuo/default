@@ -33,6 +33,13 @@ nav .pages li {
   float: right;
 }
 
+
+@media only screen and (max-width: 1000px) {
+  nav .pages li { padding: 0 10px; }
+  nav li { padding: 0 10px; }
+} 
+
+
 /* NAVIGATION */
 nav ul li a {
   text-decoration: none;
