@@ -6,7 +6,7 @@ Part 1: generating the header image
 4) Click "Create"
 5) Paste the image you want to use into the editor
 6) Scale the image by clicking on it and holding down ctrl to constrain the dimensions
-7) Go to file -> export -> quick export as a png
+7) Go to file -> export -> quick export image as a png
 8) Save the file YYMM_<Performance name>.png (with underscores instead of spaces) to the images directory
 
 Part 2: Entering the JSON
