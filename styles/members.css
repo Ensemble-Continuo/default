@@ -59,6 +59,10 @@ nav ul {
     height: 20px;
 }
 
+.member-row {
+    vertical-align: top;
+}
+
 td {
     padding: 0 70px;
 }
