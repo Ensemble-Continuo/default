@@ -10,6 +10,14 @@
     "ticketsUrl": "https://handel.eventbrite.com/"
   },
   {
+    "title": "Baroque and Bronze",
+    "imgUrl": "../images/carillon.png",
+    "date": "February 28, 2026 7:00 pm",
+    "location": "St. Jude's Episcopal Church",
+    "locationUrl": "https://maps.app.goo.gl/gCV7KxhhGW5kMDBNA",
+    "description": "Selections from Händel: Dixit Dominus. Works for carillon performed by Boudewijn Zwart and Annie Gao. Free admission."
+  },
+  {
     "title": "Second Annual Messiah Sing-Along",
     "imgUrl": "../images/stars%20episcopal%20church%20crop.jpg",
     "date": "December 19, 2025 6:30 pm",
