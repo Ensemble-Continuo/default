@@ -1,0 +1,45 @@
+---
+title: Donate - Ensemble Continuo
+layout: main.ntk
+---
+
+{% block headTags %}
+<style>
+  .myButton {
+    box-shadow: 0px 10px 14px -7px #276873;
+    background-color: #e8a200;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 13px 32px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+  }
+
+  .myButton:hover {
+    background-color: #408c99;
+  }
+
+  .myButton:active {
+    position: relative;
+    top: 1px;
+  }
+</style>
+{% endblock %}
+
+<div id="maintext" class="container">
+  <h1>Donate</h1>
+  <hr>
+  <p>
+    Ensemble Continuo is a fiscal subsidiary of Arts Silicon Valley and all donations go directly to the choir. Click
+    the button below to contribute.
+    </p>
+    <p>
+      Thank you for helping us pay for musicians, performance venues, sheet music, and refreshments!
+    </p>
+    <p><a href="https://www.paypal.com/donate/?hosted_button_id=9HR7DQYENUXUG" class="myButton">Donate today!</a></p>
+    </div>

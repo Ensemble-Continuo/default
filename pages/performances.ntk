@@ -1,0 +1,112 @@
+---
+title: Performances - Ensemble Continuo
+layout: main.ntk
+---
+
+{% block headTags %}
+<link rel="stylesheet" type="text/css" href="/styles/performances.css">
+{% endblock %}
+
+{% macro performanceCard(perf) %}
+<div class="col mb-4">
+  <div class="card h-100">
+    {% if perf.ticketsUrl %}
+    <a href="{{ perf.ticketsUrl }}" target="_blank">
+      <img src="{{ perf.imgUrl }}" class="card-img-top" alt="{{ perf.title }}">
+    </a>
+    {% else %}
+    <img src="{{ perf.imgUrl }}" class="card-img-top" alt="{{ perf.title }}">
+    {% endif %}
+    <div class="card-body">
+      <h5 class="card-title">{{ perf.title }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ perf.date }}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">
+        {% if perf.locationUrl %}
+        <a href="{{ perf.locationUrl }}" target="_blank">{{ perf.location }}</a>
+        {% else %}
+        {{ perf.location }}
+        {% endif %}
+      </h6>
+
+      <p class="card-text">{{ perf.description | safe }}</p>
+
+      {% if perf.ticketsUrl %}
+      <p><a href="{{ perf.ticketsUrl }}" id="link" class="card-link" target="_blank">Buy tickets here</a>.</p>
+      {% endif %}
+
+      {% if perf.concertProgramUrl %}
+      <p>Read the <a href="{{ perf.concertProgramUrl }}" id="link" class="card-link" target="_blank">concert
+          program</a>.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro performanceRows(perfs) %}
+{% for row in perfs %}
+<div class="row" style="display: flex; gap: 20px; margin-bottom: 20px;">
+  {% for event in row %}
+  <div class="column" style="flex: 1;">
+    {{ performanceCard(event) }}
+  </div>
+  {% endfor %}
+
+  {% if row | length == 1 %}
+  <div class="column-spacer" style="flex: 1;"></div>
+  {% endif %}
+</div>
+{% endfor %}
+{% endmacro %}
+
+{% macro performanceList(perfs) %}
+{% for perf in perfs %}
+{{ perf.title }}
+{% endfor %}
+{% endmacro %}
+
+<div id="mc_embed_shell">
+  <div id="mc_embed_signup">
+    <form
+      action="https://ensemble-continuo.us22.list-manage.com/subscribe/post?u=fdf6765d2687403e924ccc48f&amp;id=b637d06d3f&amp;f_id=00cac0e1f0"
+      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self"
+      novalidate="">
+      <div id="mc_embed_signup_scroll" class="form-group">
+        <h5>Join our mailing list to stay updated on our performances:</h5>
+        <div class="indicates-required" hidden><span class="asterisk">*</span> indicates required</div>
+        <div class="mc-field-group"><label for="mce-EMAIL">Email Address<span class="asterisk"
+              title="required">*</span></label>
+          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+          <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary btn-sm"
+            value="Subscribe" role="button">
+        </div>
+        <div id="mce-responses" class="clear foot">
+          <div class="response" id="mce-error-response" style="display: none;"></div>
+          <div class="response" id="mce-success-response" style="display: none;"></div>
+        </div>
+        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+          <input type="text" name="b_fdf6765d2687403e924ccc48f_b637d06d3f" tabindex="-1" value="">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<hr>
+
+<h2>Upcoming</h2>
+<div id="upcoming_perfs">
+  {{ performanceRows(performances | upcomingPerfs | batch(2)) }}
+</div>
+
+<h2>Past</h2>
+<div id="past_perfs">
+  {{ performanceRows(performances | recentPerfs | batch(2)) }}
+</div>
+
+<h2>Older performances</h2>
+<ul id="historical_perfs">
+  {{ performanceList(performances | historicalPerfs) }}
+</ul>
+</div>

@@ -1,11 +1,39 @@
 # Ensemble Continuo
-Template from nathan-gong.github.io. 
 
-Libraries:
+Now hosted with 11ty and Nunchucks templates. .html files are now .ntk files, and all pages use the main.ntk template.
 
-- Bootstrap
-- Font Awesome
-- jQuery
-- Popper
-- Anime.js
-- Edition Peters - Ein Deutsches Requiem Op. 45 (German Edition)
+Site is deployed nightly using GitHub Actions (primarily to update the performances page), as well as with every push to the main branch. 
+
+### To host:
+- run `npm start`
+
+### To update performances:
+
+#### Part 1: generating the header image
+
+1) Open pixlr at https://pixlr.com/editor/
+2) Click "create new"
+3) In the right column, enter the desired dimensions of 502x283
+4) Click "Create"
+5) Paste the image you want to use into the editor
+6) Scale the image by clicking on it and holding down ctrl to constrain the dimensions
+7) Go to file -> export -> quick export image as a png
+8) Save the file YYMM_<Performance name>.png (with underscores instead of spaces) to the images directory
+
+#### Part 2: Entering the JSON
+- Update the JSON below with concert details. Take note of the date format.
+- Add option fields
+  - concertProgramUrl: adds a link to the program in the description
+  - locationUrl: not required but recommended. Link to Google Maps or a website for the venue.
+  - ticketsUrl: not required but strongly recommended
+
+  {
+    "title": "Britten - A Ceremony of Carols",
+    "imgUrl": "/images/2411_Ceremony_of_Carols.png",
+    "date": "November 22, 2024 8:00 pm",
+    "location": "All Saints Episcopal Church",
+    "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
+    "description": "Ensemble Continuo performs Britten A Ceremony of Carols and a journey through Baroque motets.",
+    "ticketsUrl": "https://www.eventbrite.com/e/britten-a-ceremony-of-carols-tickets-1045064795937?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+  },
+ 

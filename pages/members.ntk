@@ -1,0 +1,72 @@
+---
+title: Members - Ensemble Continuo
+layout: main.ntk
+noWrapper: true
+---
+
+{% block headTags %}
+<link rel="stylesheet" type="text/css" href="/styles/members.css">
+{% endblock %}
+
+<div class="parallax"></div>
+
+<div id="maintext" class="container">
+  <p>Christopher Pluntke, <i>conductor</i></p>
+  <table id="members">
+    <tr>
+      <td><i>Soprano</i></td>
+      <td><i>Tenor</i></td>
+    </tr>
+    <tr class="member-row">
+      <td>
+        Alyssa Lee<br />
+        Barbara Wu<br />
+        Caroline Chen<br />
+        Chloe Veltman<br />
+        Elena Atluri<br />
+        Frauke Uhlenbruch<br />
+        Freya Zheng<br />
+        Mila Zhao<br />
+        Nancy Lai<br />
+        Shraddha Pakkala
+      </td>
+      <td>
+        Agnes Barillot Ortega<br />
+        Alicia Chan<br />
+        Annie Gao<br />
+        Brandi Frisbie<br />
+        Charlotte Fu<br />
+        Jenny Wong<br />
+        Millie Lin<br />
+        Nicole Long<br />
+        Robyn Peters<br />
+        Thomas Chan
+      </td>
+    </tr>
+    <tr class="divisi"></tr>
+    <tr>
+      <td><i>Alto</i></td>
+      <td><i>Bass</i></td>
+    </tr>
+    <tr class="member-row">
+      <td>
+        Chao-Li Tarng<br />
+        David Gatwood<br />
+        Evan Day<br />
+        Kar Epker<br />
+        Neel Pai<br />
+        Steven Conaway
+      </td>
+      <td>
+        Alex Joshi<br />
+        Danny Neumann<br />
+        Dave Peters<br />
+        Felix Sun <br />
+        Oliver Pranis<br />
+        Simeon Anfinrud<br />
+        Wei-Lin Hsiao
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="parallax"></div>

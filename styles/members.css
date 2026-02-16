@@ -72,12 +72,11 @@ td {
 }
 
 .parallax {
-    background-image: url('../images/behind sakena.jpg');
+    background-image: url('/images/behind sakena.jpg');
     height: 400px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 @media only screen and (max-width: 1000px) {

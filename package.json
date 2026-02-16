@@ -1,0 +1,28 @@
+{
+  "name": "continuo",
+  "version": "1.0.0",
+  "description": "Ensemble continuo website",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=* npx @11ty/eleventy",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/default/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ensemble-Continuo/default.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ensemble-Continuo/default/issues"
+  },
+  "homepage": "https://github.com/Ensemble-Continuo/default#readme",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "netlify-plugin-cache": "^1.0.3"
+  }
+}
