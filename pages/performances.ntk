@@ -60,9 +60,18 @@ layout: main.ntk
 {% endmacro %}
 
 {% macro performanceList(perfs) %}
+<ul>
 {% for perf in perfs %}
-{{ perf.title }}
+<li><strong>{{ perf.title }}</strong> - {{ perf.date }} at {{ perf.location }} - {{ perf.description | safe }}
+
+  {% if perf.concertProgramUrl %}
+  Read the <a href="{{ perf.concertProgramUrl }}" id="link" class="card-link" target="_blank">concert
+    program</a>.
+  {% endif %}
+
+</li>
 {% endfor %}
+</ul>
 {% endmacro %}
 
 <div id="mc_embed_shell">
