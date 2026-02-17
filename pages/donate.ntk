@@ -31,7 +31,6 @@ layout: main.ntk
 </style>
 {% endblock %}
 
-<div id="maintext" class="container">
   <h1>Donate</h1>
   <hr>
   <p>
@@ -42,4 +41,3 @@ layout: main.ntk
       Thank you for helping us pay for musicians, performance venues, sheet music, and refreshments!
     </p>
     <p><a href="https://www.paypal.com/donate/?hosted_button_id=9HR7DQYENUXUG" class="myButton">Donate today!</a></p>
-    </div>

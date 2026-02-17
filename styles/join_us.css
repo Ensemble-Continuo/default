@@ -70,10 +70,6 @@ nav ul {
     text-decoration: none;
 }
 
-#maintext {
-    padding: 70px 0;
-}
-
 #shade {
     text-shadow: 1.5px 1.5px red;
     background-color: greenyellow;
