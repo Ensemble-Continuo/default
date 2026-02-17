@@ -1,0 +1,35 @@
+---
+title: Contact us - Ensemble Continuo
+layout: main.ntk
+---
+
+{% block headTags %}
+<link rel="stylesheet" type="text/css" href="/styles/join_us.css">
+{% endblock %}
+
+
+<h1>Contact us</h1>
+<hr>
+<p>
+    Use this form to contact Ensemble Continuo. We love feedback from audience members!
+</p>
+<p>
+    Note: if you are interested in joining the choir, please visit the <a href="join_us.html">join us</a> page.
+</p>
+
+<form action="https://formspree.io/f/xeqwlood" method="POST">
+    <div class="formrow">
+        <label>Your email:<br />
+            <input type="email" name="email" required size="50">
+        </label>
+    </div>
+    <div class="formrow">
+        <label class="message">
+            Your message: <br />
+            <textarea name="message" class="message" rows=7></textarea>
+        </label>
+    </div>
+    <div class="formrow">
+        <button type="submit">Send</button>
+    </div>
+</form>

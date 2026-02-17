@@ -15,7 +15,7 @@ body {
   background-color: white;
   opacity: 90%;
   position: relative;
-  z-index: 3000;
+    z-index: 3000;
 }
 
 nav .home li {
@@ -160,7 +160,7 @@ nav a:hover {
 #rnb {
   height: 65px;
   position: relative;
-  z-index: 3000;
+  /* z-index: 3000; */
 }
 
 #header_logo {

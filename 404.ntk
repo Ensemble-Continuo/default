@@ -1,0 +1,10 @@
+---
+title: Page not found - Ensemble Continuo
+layout: main.ntk
+permalink: 404.html
+eleventyExcludeFromCollections: true
+---
+
+<h1>Page Not Found</h1>
+
+<p>Sorry, this page does not exist. <a href="/">Return to Homepage</a></p>
