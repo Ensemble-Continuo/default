@@ -33,7 +33,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-audit --no-fund --registry=https://registry.npmjs.org/
 
       - name: Build 11ty
         run: npx @11ty/eleventy
