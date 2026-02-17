@@ -33,7 +33,7 @@ jobs:
           path: ./.cache
           key: ${{ runner.os }}-eleventy-fetch-cache
 
-      - run: npm install
+      - run: npm install --registry=https://registry.npmjs.org/
       - run: npm run build-ghpages
 
       - name: Deploy
