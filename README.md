@@ -5,7 +5,9 @@ Now hosted with 11ty and Nunchucks templates. .html files are now .ntk files, an
 Site is deployed nightly using GitHub Actions (primarily to update the performances page), as well as with every push to the main branch. 
 
 ### To host:
-- run `npm start`
+- To host locally, run `npm start`
+- To view changes before submitting them, commit them to the dev branch and view them on [this URL](https://default-9ca.pages.dev/). (Configured using Cloudflare using the EC email address.)
+- To deploy, merge dev to the main branch.
 
 ### To update performances:
 
