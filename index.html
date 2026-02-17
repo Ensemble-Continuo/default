@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ensemble Continuo</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/navbar.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <!-- Global site tag (gtag.js) - Google Ads: 593551022 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-593551022"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+                                                    function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-593551022');
+
+</script>
+<link rel="stylesheet" type="text/css" href="/styles/main.css">
+<link rel="shortcut icon" type="image/jpg" href="images/ec_header_logo.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLMVDHBTBP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+                                                    function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SLMVDHBTBP');
+    </script>
+    
+    
+</head>
+
+<body onload="document.body.style.opacity='1'">
+  <div id="rnb">
+    <div class="navcontainer">
+      <div class="home" id="header_logo">
+        <a href="/"><img src="/images/ec_header_logo.png" /></a>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle Navigation">
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+      <nav class="stroke">
+        <div class="pages">
+          <ul>
+            <li>
+              <h3><a href="/pages/performances.html">Performances</a></h3>
+            </li>
+            <li>
+              <h3><a href="/pages/join_us.html">Join us</a></h3>
+            </li>
+            <li>
+              <h3><a href="/pages/contact_us.html">Contact us</a></h3>
+            </li>
+            <li>
+              <h3><a href="/pages/members.html">Members</a></h3>
+            </li>
+            <li>
+              <h3><a href="/pages/donate.html">Donate</a></h3>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  
+
+<!-- this adds instagram, fb, etc. icons-->
+<script src="https://kit.fontawesome.com/1e86972b80.js" crossorigin="anonymous"></script>
+
+
+
+<!--Mailchimp-->
+<script id="mcjs">
+  !function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/fdf6765d2687403e924ccc48f/538c36d8f6cc0f4bfb0dd8157.js");
+</script>
+<!-- Video controls -->
+<script>
+  function toggleMute() {
+    var video = document.getElementById("bgVideo");
+    //var button = document.getElementById("muteButton");
+    if (video.muted) {
+      video.muted = false;
+      //button.innerHTML = "Mute";
+    } else {
+      video.muted = true;
+      //button.innerHTML = "Unmute";
+    }
+  }
+</script>
+
+<div class="index-header">
+  <div class="main">
+    <h2 class="title"><b>ENSEMBLE CONTINUO</b></h2>
+    <h3 id="headline">We are a classical chamber choir based in Palo Alto, California. </h3>
+    <a href="https://www.instagram.com/ensemblecontinuo/" target="_blank">
+      <i id="instagram" class="fab fa-instagram fa-3x" data-toggle="tooltip" data-placement="bottom"
+        title="Instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/@ensemblecontinuo468" target="_blank">
+      <i id="youtube" class="fab fa-youtube fa-3x" data-toggle="tooltip" data-placement="bottom" title="YouTube"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61560800301152" target="_blank">
+      <i id="facebook" class="fab fa-facebook fa-3x" data-toggle="tooltip" data-placement="bottom" title="Facebook"></i>
+    </a>
+    <a href="https://ensemble-continuo.us22.list-manage.com/subscribe?u=fdf6765d2687403e924ccc48f&id=b637d06d3f">
+      <i id="mailchimp" class="fa fa-envelope fa-3x" data-toggle="tooltip" data-placement="bottom"
+        title="Subscribe to our mailing list"></i>
+    </a>
+    <a>
+      <a href="pages/contact_us.html">
+        <i id="email" class="fas fa-reply fa-3x" data-toggle="tooltip" data-placement="bottom" title="Contact us"></i>
+      </a>
+      <br />
+      <h4 id="instruction">
+        Click below to hear And The Swallow by Caroline Shaw. Full recording on <a
+          href="https://www.youtube.com/watch?v=IfXHkO8XKhQ" target="_blank">YouTube</a>.<br>
+      </h4>
+  </div>
+</div>
+<div id="videoBackground">
+  <video id="bgVideo" autoplay muted playsinline loop preload="auto" poster="/images/and_the_swallow_cover.png"
+    onclick="toggleMute()">
+    <source src="/videos/and_the_swallow.webm" type="video/webm">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+
+
+
+<div style="z-index:999" class="toast float-left fade show" role="alert" aria-live="assertive" aria-atomic="true"
+  data-autohide="false" data-animation="true">
+  <div class="toast-header next-show-header">
+    Next concert: &nbsp;
+    <strong class="mr-auto">
+      <a style="color: #333" href="/pages/performances.html">Baroque and Bronze</a>
+    </strong>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    <a href="/pages/performances.html">Feb 28, 2026 - St. Jude&#39;s Episcopal Church</a>
+  </div>
+</div>
+
+
+
+  
+  
+  </body>
+
+</html>
