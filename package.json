@@ -22,7 +22,6 @@
   "homepage": "https://github.com/Ensemble-Continuo/default#readme",
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "netlify-plugin-cache": "^1.0.3"
+    "@11ty/eleventy": "^3.1.2"
   }
 }
