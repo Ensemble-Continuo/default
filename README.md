@@ -6,7 +6,7 @@ Site is deployed nightly using GitHub Actions (primarily to update the performan
 
 ### To host:
 - To host locally, run `npm start`
-- To view changes before submitting them, commit them to the dev branch and view them on [this URL](https://default-9ca.pages.dev/). (Configured using Cloudflare using the EC email address.)
+- To view changes before submitting them, commit them to the dev branch, verify the Action built successfully, and view them on [this URL](https://default-9ca.pages.dev/). (Configured using Cloudflare using the EC email address.)
 - To deploy, merge dev to the main branch.
 
 ### To update performances:
