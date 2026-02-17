@@ -45,6 +45,9 @@
               <h3><a href="/pages/performances.html">Performances</a></h3>
             </li>
             <li>
+              <h3><a href="/pages/donate.html">Donate</a></h3>
+              </li>
+              <li>
               <h3><a href="/pages/join_us.html">Join us</a></h3>
             </li>
             <li>
@@ -54,7 +57,10 @@
               <h3><a href="/pages/members.html">Members</a></h3>
             </li>
             <li>
-              <h3><a href="/pages/donate.html">Donate</a></h3>
+              <h3><a href="/pages/about_us.html">About us</a></h3>
+            </li>
+            <li>
+              <h3><a href="/pages/faqs.html">FAQs</a></h3>
             </li>
           </ul>
         </div>
