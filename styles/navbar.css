@@ -15,11 +15,13 @@ body {
   background-color: white;
   opacity: 90%;
   position: relative;
-    z-index: 3000;
+  z-index: 3000;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav .home li {
-  float: left;
   padding: 0px;
   padding-right: 5px;
   z-index: 6000;
@@ -27,14 +29,22 @@ nav .home li {
 
 nav ul {
   list-style: none;
+  display: flex;
+    justify-content: flex-end;
 }
 
 nav .pages li {
   margin: 0;
   padding: 0 30px;
-  float: right;
 }
 
+nav .pages {
+  width: 100%;
+}
+
+nav .pages ul {
+  padding-left: 0;
+}
 
 .menu-checkbox {
   display: none;
@@ -53,7 +63,7 @@ nav .pages li {
   right: 15px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
   .navcontainer {
     min-width: 100%;
   }
@@ -71,10 +81,14 @@ nav .pages li {
     background-color: white;
     z-index: 3000;
   }
-
+  
+nav .pages {
+  width: auto;
+}
   nav ul {
     padding-left: 0;
     padding-top: 0;
+    display: block;
   }
 
   nav li,
@@ -84,7 +98,7 @@ nav .pages li {
     text-align: center;
     padding: 15px 0;
   }
-
+  
   .menu-checkbox:checked~nav.stroke {
     display: block;
   }
@@ -131,19 +145,17 @@ nav.stroke ul li a:hover:after {
 }
 
 nav ul {
-  list-style: none;
   background-color: rgba(255, 255, 255, 0.7);
   padding-left: 40px;
   padding-top: 15px;
+  margin: 0;
   width: 100%;
-  top: 0;
   z-index: 1000;
 }
 
 nav li {
   margin: 0;
   padding: 0 30px;
-  float: right;
 }
 
 nav a {
@@ -164,8 +176,7 @@ nav a:hover {
 }
 
 #header_logo {
-  float: left;
   padding-left: 30px;
-  padding-top: auto;
-  padding-bottom: auto;
+  display: flex;
+    align-items: center;
 }
