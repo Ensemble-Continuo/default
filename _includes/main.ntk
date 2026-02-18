@@ -4,6 +4,7 @@
 <head>
   <title>{{ title }}</title>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/navbar.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
@@ -11,23 +12,23 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-593551022"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-                                                    function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'AW-593551022');
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'AW-593551022');
 
 </script>
-<link rel="stylesheet" type="text/css" href="/styles/main.css">
-<link rel="shortcut icon" type="image/jpg" href="images/ec_header_logo.png">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLMVDHBTBP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-                                                    function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-SLMVDHBTBP');
-    </script>
-    {% block headTags %}
-    {% endblock %}
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <link rel="shortcut icon" type="image/jpg" href="images/ec_header_logo.png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLMVDHBTBP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SLMVDHBTBP');
+  </script>
+  {% block headTags %}
+  {% endblock %}
 </head>
 
 <body onload="document.body.style.opacity='1'">
@@ -45,22 +46,22 @@
               <h3><a href="/pages/performances.html">Performances</a></h3>
             </li>
             <li>
-              <h3><a href="/pages/donate.html">Donate</a></h3>
+              <h3><a href="/pages/about_us.html">About us</a></h3>
               </li>
               <li>
+              <h3><a href="/pages/members.html">Members</a></h3>
+            </li>
+            <li>
+              <h3><a href="/pages/faqs.html">FAQs</a></h3>
+            </li>
+            <li>
               <h3><a href="/pages/join_us.html">Join us</a></h3>
             </li>
             <li>
               <h3><a href="/pages/contact_us.html">Contact us</a></h3>
             </li>
             <li>
-              <h3><a href="/pages/members.html">Members</a></h3>
-            </li>
-            <li>
-              <h3><a href="/pages/about_us.html">About us</a></h3>
-            </li>
-            <li>
-              <h3><a href="/pages/faqs.html">FAQs</a></h3>
+              <h3><a href="/pages/donate.html">Donate</a></h3>
             </li>
           </ul>
         </div>
@@ -76,6 +77,6 @@
   </div>
   {% endif %}
   {% endblock %}
-  </body>
+</body>
 
 </html>

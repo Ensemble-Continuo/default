@@ -8,7 +8,7 @@ layout: main.ntk
 {% endblock %}
 
 {% macro performanceCard(perf) %}
-<div class="col mb-4">
+<div class="col perf-card-col">
   <div class="card h-100">
     {% if perf.ticketsUrl %}
     <a href="{{ perf.ticketsUrl }}" target="_blank">
@@ -45,15 +45,15 @@ layout: main.ntk
 
 {% macro performanceRows(perfs) %}
 {% for row in perfs %}
-<div class="row" style="display: flex; gap: 20px; margin-bottom: 20px;">
+<div class="row perf-row">
   {% for event in row %}
-  <div class="column" style="flex: 1;">
+  <div class="column perf-column">
     {{ performanceCard(event) }}
   </div>
   {% endfor %}
 
   {% if row | length == 1 %}
-  <div class="column-spacer" style="flex: 1;"></div>
+  <div class="column-spacer perf-column"></div>
   {% endif %}
 </div>
 {% endfor %}
