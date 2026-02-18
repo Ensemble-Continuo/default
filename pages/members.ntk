@@ -15,7 +15,7 @@ noWrapper: true
   <table id="members">
     <tr>
       <td><i>Soprano</i></td>
-      <td><i>Tenor</i></td>
+      <td><i>Alto</i></td>
     </tr>
     <tr class="member-row">
       <td>
@@ -45,7 +45,7 @@ noWrapper: true
     </tr>
     <tr class="divisi"></tr>
     <tr>
-      <td><i>Alto</i></td>
+      <td><i>Tenor</i></td>
       <td><i>Bass</i></td>
     </tr>
     <tr class="member-row">
