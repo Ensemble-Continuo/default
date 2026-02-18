@@ -81,14 +81,22 @@ td {
 
 @media only screen and (max-width: 1000px) {
     .parallax {
-        height: 1000px; 
+        height: 1000px;
         background-attachment: fixed;
         background-position: center bottom;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    
+        .container {
+            width: 95%;
+            top: 5%;
+        }
+
+        td {
+            padding: 0 10px;
+            font-size: 1.1em;
+        }
 }
 
 #title {
