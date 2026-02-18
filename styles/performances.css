@@ -16,8 +16,8 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    opacity: 0; 
-    transition: opacity 1s; 
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 nav li {
@@ -58,7 +58,41 @@ form {
 }
 
 .column {
-    padding-bottom:15px;
+    padding-bottom: 15px;
+}
+
+.perf-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.perf-column {
+    flex: 1;
+}
+
+.perf-card-col {
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .perf-row {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 5px;
+    }
+
+    .perf-card-col {
+        margin-bottom: 10px;
+    }
+
+    .card {
+        padding: 5px;
+    }
+
+    .column {
+        padding-bottom: 5px;
+    }
 }
 
 .container {
@@ -72,22 +106,23 @@ form {
 
 /* container */
 .responsive-two-columns {
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* columns */
-.responsive-two-columns > * {
-    width:100%;
+.responsive-two-columns>* {
+    width: 100%;
 }
 
 /* tablet breakpoint */
 @media (min-width:768px) {
-    .responsive-two-columns > * {
-        width:50%;
+    .responsive-two-columns>* {
+        width: 50%;
     }
+
     .column {
-        padding-bottom:0px;
+        padding-bottom: 0px;
     }
 }
 
@@ -113,6 +148,6 @@ form {
     color: #4267b2;
 }
 
-#historical_perfs li{
-  padding:0.5em;
+#historical_perfs li {
+    padding: 0.5em;
 }
