@@ -141,13 +141,23 @@ img.banner {
     color: #dda960;
 }
 
+/* In normal flow (not fixed) so the page scrolls past the video to the
+   footer, which carries the charity ID, address, and mission statement. */
 #videoBackground {
-    position: fixed;
+    position: relative;
     left: 0;
     width: 100%;
-    height: 80vh;  
+    height: 80vh;
     overflow: hidden;
-    z-index: -1000;
+}
+
+/* Pins the "next concert" toast to the top-left of the hero video. The .toast
+   margin below supplies the inset, matching where it sat when the video was
+   fixed. */
+#videoBackground .toast {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #bgVideo {

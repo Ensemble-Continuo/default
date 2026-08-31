@@ -4,16 +4,7 @@ layout: main.ntk
 noWrapper: true # Ensures video takes up remaining space with no padding
 ---
 
-{% block headTags %}
-<!-- this adds instagram, fb, etc. icons-->
-<script src="https://kit.fontawesome.com/1e86972b80.js" crossorigin="anonymous"></script>
-{% endblock %}
-
 {% block content %}
-<!--Mailchimp-->
-<script id="mcjs">
-  !function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/fdf6765d2687403e924ccc48f/538c36d8f6cc0f4bfb0dd8157.js");
-</script>
 <!-- Video controls -->
 <script>
   function toggleMute() {
@@ -64,26 +55,30 @@ noWrapper: true # Ensures video takes up remaining space with no padding
     <source src="/videos/and_the_swallow.webm" type="video/webm">
     Your browser does not support HTML5 video.
   </video>
-</div>
 
-{% set upcoming = performances | upcomingPerfs %}
-{% if upcoming | length > 0 %}
-{% set nextPerf = upcoming | first %}
-<div style="z-index:999" class="toast float-left fade show" role="alert" aria-live="assertive" aria-atomic="true"
-  data-autohide="false" data-animation="true">
-  <div class="toast-header next-show-header">
-    Next concert: &nbsp;
-    <strong class="mr-auto">
-      <a style="color: #333" href="/pages/performances.html">{{ nextPerf.title }}</a>
-    </strong>
-    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  {# Lives inside #videoBackground so it stays pinned over the hero. It used to
+     sit here visually only because the video was position:fixed and out of
+     flow; now that the video flows (to make room for the footer), the toast
+     needs a real anchor or it drops down onto the footer. #}
+  {% set upcoming = performances | upcomingPerfs %}
+  {% if upcoming | length > 0 %}
+  {% set nextPerf = upcoming | first %}
+  <div style="z-index:999" class="toast float-left fade show" role="alert" aria-live="assertive" aria-atomic="true"
+    data-autohide="false" data-animation="true">
+    <div class="toast-header next-show-header">
+      Next concert: &nbsp;
+      <strong class="mr-auto">
+        <a style="color: #333" href="/pages/performances.html">{{ nextPerf.title }}</a>
+      </strong>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      <a href="/pages/performances.html">{{ nextPerf.date | mmm_dd_yyyy }} - {{ nextPerf.location }}</a>
+    </div>
   </div>
-  <div class="toast-body">
-    <a href="/pages/performances.html">{{ nextPerf.date | mmm_dd_yyyy }} - {{ nextPerf.location }}</a>
-  </div>
+  {% endif %}
 </div>
-{% endif %}
 
 {% endblock %}

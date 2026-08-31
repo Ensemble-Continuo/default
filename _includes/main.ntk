@@ -18,6 +18,9 @@
 
 </script>
   <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <link rel="stylesheet" type="text/css" href="/styles/footer.css">
+  <!-- this adds instagram, fb, etc. icons -->
+  <script src="https://kit.fontawesome.com/1e86972b80.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" type="image/jpg" href="images/ec_header_logo.png">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLMVDHBTBP"></script>
@@ -77,6 +80,9 @@
   </div>
   {% endif %}
   {% endblock %}
+  {% if not noFooter %}
+  {% include "footer.ntk" %}
+  {% endif %}
 </body>
 
 </html>
