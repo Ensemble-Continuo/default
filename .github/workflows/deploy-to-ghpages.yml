@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
+  pull_request:         # builds only; the deploy step below is skipped
 
 jobs:
   deploy:
@@ -33,6 +33,10 @@ jobs:
         with:
           path: ./_site
 
+      # Pull requests stop at the build: a green check means the site compiles,
+      # not that it shipped. Without this, opening a PR published it straight to
+      # production.
       - name: Deploy to GitHub Pages
         id: deployment
+        if: github.event_name != 'pull_request'
         uses: actions/deploy-pages@v4
