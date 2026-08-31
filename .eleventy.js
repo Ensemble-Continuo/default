@@ -9,6 +9,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addExtension("ntk", { key: "njk" });
 
+  // Footer copyright line; the site rebuilds nightly, so this stays current.
+  eleventyConfig.addGlobalData("currentYear", () => new Date().getFullYear());
+
   let njkEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("_includes")
   );

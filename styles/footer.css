@@ -1,0 +1,142 @@
+/* Site footer — implements the Ensemble Continuo footer design. */
+
+.site-footer {
+  font-family: 'Palatino Linotype', Palatino, serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  padding: 0 24px 40px;
+  position: relative;
+  z-index: 100;
+  /* Matches .navcontainer in navbar.css. This site is not mobile-responsive —
+     the navbar forces an 840px floor and the page scrolls horizontally below
+     that — so the footer holds the same floor rather than collapsing to one
+     column while the rest of the page stays wide. */
+  min-width: 840px;
+}
+
+.site-footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-top: 1px solid #dcdad6;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.site-footer__lockup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-footer__lockup img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.site-footer__wordmark {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.site-footer__mission {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 52ch;
+  text-wrap: pretty;
+  color: #2b2b2b;
+}
+
+.site-footer__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.site-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.site-footer__address {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2b2b2b;
+}
+
+.site-footer__legal {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b6b6b;
+}
+
+.site-footer__social {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 19px;
+}
+
+.site-footer__social a,
+.site-footer__social a:visited {
+  color: #1a1a1a;
+}
+
+.site-footer__social a:hover {
+  color: #6b6b6b;
+}
+
+/* main.css sets a global `i { color: black; margin: 10px }` — neutralise it
+   here so the icon row keeps the design's 22px gap. */
+.site-footer__social i {
+  color: inherit;
+  margin: 0;
+}
+
+.site-footer__cta,
+.site-footer__cta:visited {
+  align-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #1a1a1a;
+  padding: 11px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  background: transparent;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.site-footer__cta:hover {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.site-footer__colophon {
+  max-width: 1100px;
+  margin: 32px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid #ebe9e5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  align-items: baseline;
+  font-size: 13px;
+  color: #6b6b6b;
+}

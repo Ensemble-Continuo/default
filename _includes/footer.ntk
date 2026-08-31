@@ -1,0 +1,50 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+
+    <div class="site-footer__brand">
+      <div class="site-footer__lockup">
+        <img src="/images/ec_header_logo.png" alt="Ensemble Continuo" />
+        <div class="site-footer__wordmark">Ensemble Continuo</div>
+      </div>
+      <p class="site-footer__mission">
+        Ensemble Continuo is a classical chamber choir based in Palo Alto, California. We cultivate a
+        vibrant choral community in the Bay Area by fostering artistic excellence, lifelong learning,
+        and inclusivity &mdash; providing a welcoming home for experienced singers, championing diverse
+        and rarely-performed works, and keeping our concerts and membership affordable to all.
+      </p>
+    </div>
+
+    <div class="site-footer__aside">
+
+      <div class="site-footer__contact">
+        <div class="site-footer__address">
+          <div>555 Waverley St, Palo Alto, CA 94301</div>
+          <div>Charity ID (EIN): 39-4827981</div>
+        </div>
+        <div class="site-footer__legal">Ensemble Continuo is a federally recognized <span
+            style="white-space: nowrap">501(c)(3)</span> nonprofit; California exemption pending.</div>
+      </div>
+
+      <div class="site-footer__social">
+        <a href="https://www.instagram.com/ensemblecontinuo/" aria-label="Instagram" target="_blank"
+          rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@ensemblecontinuo468" aria-label="YouTube" target="_blank"
+          rel="noopener"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61560800301152" aria-label="Facebook" target="_blank"
+          rel="noopener"><i class="fab fa-facebook"></i></a>
+        <a href="/pages/contact_us.html" aria-label="Contact us"><i class="far fa-envelope"></i></a>
+      </div>
+
+      <a class="site-footer__cta"
+        href="https://ensemble-continuo.us22.list-manage.com/subscribe?u=fdf6765d2687403e924ccc48f&amp;id=b637d06d3f"
+        target="_blank" rel="noopener">
+        Join our mailing list
+      </a>
+
+    </div>
+  </div>
+
+  <div class="site-footer__colophon">
+    <div>&copy; {{ currentYear }} Ensemble Continuo. All rights reserved.</div>
+  </div>
+</footer>
