@@ -1,6 +1,6 @@
 ---
 layout: main.ntk
-title: FAQs - Ensemble Continuo
+title: "Auditions, Rehearsals & Repertoire FAQs | Ensemble Continuo"
 ---
 
 # FAQs
