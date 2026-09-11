@@ -7,6 +7,19 @@ layout: main.ntk
 <link rel="stylesheet" type="text/css" href="/styles/join_us.css">
 {% endblock %}
 
-<iframe
-    style="position:fixed; top:70px; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"
+<h1>Sing with Ensemble Continuo</h1>
+<hr>
+<p>
+    Ensemble Continuo is a chamber choir comprised primarily of adults based in Palo Alto, California. We welcome experienced adult singers of all voice parts (Soprano, Alto, Tenor, Bass) who share a passion for singing challenging classical repertoire in a supportive setting. Rehearsals take place Thursday evenings in Palo Alto.
+</p>
+<p>
+    For full details on our rehearsal schedule, dues, and membership expectations, please visit our <a href="/pages/faqs.html">FAQs</a>.
+</p>
+
+<h3>Request an Audition</h3>
+<p>
+    Please fill out the inquiry form below, and our director will contact you with audition details.
+</p>
+
+<iframe class="join-form" title="Ensemble Continuo audition enquiry form"
     src="https://docs.google.com/forms/d/e/1FAIpQLSdqDqxM3iXYNbcVvUYrj1pCg2vC72FMywElksUlBvQ-oKJYHQ/viewform?embedded=true">Loading…</iframe>
