@@ -1,6 +1,7 @@
 ---
 layout: main.ntk
 title: "Auditions, Rehearsals & Repertoire FAQs | Ensemble Continuo"
+description: "How big is the choir, what do we sing, when do we rehearse, and how do auditions work? Answers for singers thinking of joining Ensemble Continuo."
 ---
 
 # FAQs
