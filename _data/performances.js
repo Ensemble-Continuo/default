@@ -19,16 +19,19 @@ import fs from "node:fs";
 const SOURCE = new URL("../performances.json", import.meta.url);
 
 /**
- * Loads every performance, validated and with its date parsed.
+ * Loads every performance, validated, with its date parsed and a header
+ * image guaranteed.
  *
- * @returns {Array<object>} the authored entries plus derived date fields
+ * @returns {Array<object>} the authored entries plus derived fields
  */
 export default function () {
-  return JSON.parse(fs.readFileSync(SOURCE)).map(normalize);
+  const authored = JSON.parse(fs.readFileSync(SOURCE));
+  return recycleMissingImages(authored.map(normalize));
 }
 
-// Fields every entry must carry, whatever else it does.
-const REQUIRED_FIELDS = ["title", "date", "location", "imgUrl"];
+// Fields every entry must carry, whatever else it does. imgUrl is not among
+// them: an entry without one borrows a picture, see recycleMissingImages.
+const REQUIRED_FIELDS = ["title", "date", "location"];
 
 // Date shapes we refuse rather than guess at. Each of these parses without
 // complaint in JavaScript, but not to the date a person meant -- which makes
@@ -63,7 +66,23 @@ function normalize(perf) {
     timeTBD,
     startsAt,
     startDateIso: toIsoString(startsAt, timeTBD),
+    category: categorize(startsAt),
+    imageIsRecycled: false,
   };
+}
+
+// Which section of the performances page an entry belongs in.
+function categorize(startsAt) {
+  const ageInDays =
+    (Date.now() - startsAt.getTime()) / (1000 * 60 * 60 * 24);
+
+  if (ageInDays < 0.5) {
+    return "upcoming";
+  }
+  if (ageInDays < 500) {
+    return "recent";
+  }
+  return "historical";
 }
 
 // Turns the authored date string into a Date, refusing anything ambiguous,
@@ -124,8 +143,55 @@ function toIsoString(date, timeTBD) {
   return `${day}T${pad(date.getHours())}:${pad(date.getMinutes())}:00`;
 }
 
+// Gives a header image to entries that do not name one, by borrowing a
+// photograph from a concert old enough that its picture is no longer shown.
+//
+// Concerts drop out of the card grid after a couple of years into a text-only
+// archive, so those images sit unused. Lending one means a concert can be
+// announced the day it is booked, rather than waiting on somebody to make
+// artwork -- which is the difference between a listing and no listing.
+//
+// Pictures are handed out by position, not at random, so a concert keeps the
+// same one from build to build instead of reshuffling every night.
+function recycleMissingImages(perfs) {
+  const needy = perfs.filter(p => !p.imgUrl).sort(byNewestFirst);
+  if (!needy.length) return perfs;
+
+  const pool = recyclableImages(perfs);
+  if (!pool.length) {
+    reject(needy[0], 'has no "imgUrl", and no older concert has a picture ' +
+      "free to lend it");
+  }
+  needy.forEach((perf, index) => {
+    perf.imgUrl = pool[index % pool.length];
+    perf.imageIsRecycled = true;
+  });
+  return perfs;
+}
+
+// Images belonging to concerts that have aged into the text-only archive and
+// so appear nowhere on the page. Most recent first, on the reasoning that the
+// newest archived photograph best resembles the ensemble today.
+function recyclableImages(perfs) {
+  const onScreen = new Set(
+    perfs.filter(p => p.category !== "historical").map(p => p.imgUrl));
+
+  const archived = perfs
+    .filter(p => p.category === "historical" && p.imgUrl)
+    .sort(byNewestFirst)
+    .map(p => p.imgUrl)
+    .filter(imgUrl => !onScreen.has(imgUrl));
+
+  return [...new Set(archived)];
+}
+
+function byNewestFirst(a, b) {
+  return b.startsAt - a.startsAt;
+}
+
 // Stops the build, naming the concert so the author knows which line to fix.
 function reject(perf, problem) {
   const name = perf.title ? `"${perf.title}"` : "An untitled performance";
   throw new Error(`performances.json: ${name} ${problem}.`);
 }
+
