@@ -1,6 +1,6 @@
 ---
 layout: main.ntk
-title: About Our Ensemble
+title: "About Our Bay Area Choir | Ensemble Continuo"
 ---
 
 # About Us
