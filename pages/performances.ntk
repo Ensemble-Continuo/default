@@ -15,7 +15,7 @@ layout: main.ntk
     "@context": "https://schema.org",
     "@type": "MusicEvent",
     "name": {{ perf.title | dump | safe }},
-    "startDate": {{ perf.date | isoDateTime | dump | safe }},
+    "startDate": {{ perf.startDateIso | dump | safe }},
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
     "image": {{ (site.url + perf.imgUrl) | dump | safe }},
