@@ -1,6 +1,7 @@
 ---
 layout: main.ntk
 title: "About Our Bay Area Choir | Ensemble Continuo"
+description: "Founded in 2023, Ensemble Continuo is an auditioned chamber choir singing choral masterworks from the Renaissance to the present across the Bay Area."
 ---
 
 # About Us
