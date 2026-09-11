@@ -23,11 +23,33 @@ Site is deployed nightly using GitHub Actions (primarily to update the performan
 8) Save the file YYMM_<Performance name>.png (with underscores instead of spaces) to the images directory
 
 #### Part 2: Entering the JSON
-- Update the JSON below with concert details. Take note of the date format.
-- Add option fields
+- Add an entry to `performances.json` in the root of the repository, at the
+  top of the list. Copy the shape of the example below.
+- Add optional fields
   - concertProgramUrl: adds a link to the program in the description
   - locationUrl: not required but recommended. Link to Google Maps or a website for the venue.
   - ticketsUrl: not required but strongly recommended
+  - timeTBD: set to `true` only if the start time genuinely is not settled yet
+
+##### About the date
+
+The build checks every date and **fails with an explanation** rather than
+publishing a concert on the wrong day, so a mistake here cannot reach the
+live site. Write the date the way you would say it:
+
+    "November 22, 2024 8:00 pm"      "Nov 22, 2024 20:00"
+
+Ordinals, weekday names and "at" are all fine — `Friday, November 22nd, 2024
+at 8:00 p.m.` is understood. A start time is required, because visitors need
+to know when to arrive; use `"timeTBD": true` if you truly do not have one.
+
+Three things are rejected on purpose, because they look valid but are read as
+the wrong date:
+
+  - `2024-11-22` — a bare ISO date is treated as UTC and lands a day early
+  - `November 22-23, 2024` — a range parses to an unrelated year
+  - `11/22/24` — a two-digit year could mean either century
+
 
   {
     "title": "Britten - A Ceremony of Carols",

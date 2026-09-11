@@ -103,7 +103,7 @@ noWrapper: true # Ensures video takes up remaining space with no padding
       </button>
     </div>
     <div class="toast-body">
-      <a href="/pages/performances.html">{{ nextPerf.date | mmm_dd_yyyy }} - {{ nextPerf.location }}</a>
+      <a href="/pages/performances.html">{{ nextPerf.startsAt | mmm_dd_yyyy }} - {{ nextPerf.location }}</a>
     </div>
   </div>
   {% endif %}
