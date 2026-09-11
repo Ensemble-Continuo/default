@@ -6,6 +6,15 @@
   {% if description %}<meta name="description" content="{{ description }}">
   {% endif %}<meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link previews on Facebook, LinkedIn, iMessage, Slack, etc. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.ogImage }}">
+  <meta property="og:image:alt" content="{{ site.name }} in performance">
+  {% if description %}<meta property="og:description" content="{{ description }}">
+  {% endif %}<meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="/styles/navbar.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
