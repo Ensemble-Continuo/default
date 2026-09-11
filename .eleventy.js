@@ -48,6 +48,9 @@ export default function (eleventyConfig) {
     });
   });
 
+  // ISO 8601 for schema.org Event markup.
+  eleventyConfig.addFilter("isoDateTime", toLocalIsoDateTime);
+
   ////////////////////////////////////////////////
 
   return {
@@ -57,6 +60,27 @@ export default function (eleventyConfig) {
     dataTemplateEngine: "njk"
   };
 };
+
+// Formats a performance date as a local-time ISO 8601 string, e.g.
+// "June 27, 2026 7:00 pm" -> "2026-06-27T19:00:00".
+//
+// Entries that give no clock time yield a date only, e.g.
+// "July 2, 2023" -> "2023-07-02", rather than asserting a midnight start.
+//
+// The UTC offset is deliberately omitted. Dates in performances.json are
+// wall-clock times at the venue, but the build runs in UTC on CI and locally
+// in Pacific time. Reading the date back with local getters recovers the
+// original wall-clock time in either environment; appending an offset would
+// shift every concert by however many hours the build machine happens to be
+// from the venue.
+function toLocalIsoDateTime(dateStr) {
+  const date = new Date(dateStr);
+  const pad = (n) => String(n).padStart(2, "0");
+  const day = `${date.getFullYear()}-${pad(date.getMonth() + 1)}` +
+    `-${pad(date.getDate())}`;
+  if (!/\d\s*:\s*\d|\d\s*[ap]\.?m/i.test(dateStr)) return day;
+  return `${day}T${pad(date.getHours())}:${pad(date.getMinutes())}:00`;
+}
 
 // Determines which category a performance falls into
 function classifyPerf(perf) {

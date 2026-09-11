@@ -6,6 +6,51 @@ layout: main.ntk
 
 {% block headTags %}
 <link rel="stylesheet" type="text/css" href="/styles/performances.css">
+{%- set upcoming = performances | upcomingPerfs %}
+{%- if upcoming.length %}
+<script type="application/ld+json">
+[
+{%- for perf in upcoming %}
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicEvent",
+    "name": {{ perf.title | dump | safe }},
+    "startDate": {{ perf.date | isoDateTime | dump | safe }},
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "image": {{ (site.url + perf.imgUrl) | dump | safe }},
+    {%- if perf.description %}
+    "description": {{ perf.description | striptags | dump | safe }},
+    {%- endif %}
+    "location": {
+      "@type": "Place",
+      "name": {{ perf.location | dump | safe }}
+      {%- if perf.locationUrl %},
+      "url": {{ perf.locationUrl | dump | safe }}
+      {%- endif %}
+    },
+    "performer": {
+      "@type": "MusicGroup",
+      "name": {{ site.name | dump | safe }},
+      "url": {{ site.url | dump | safe }}
+    },
+    "organizer": {
+      "@type": "MusicGroup",
+      "name": {{ site.name | dump | safe }},
+      "url": {{ site.url | dump | safe }}
+    }
+    {%- if perf.ticketsUrl %},
+    "offers": {
+      "@type": "Offer",
+      "url": {{ perf.ticketsUrl | dump | safe }},
+      "availability": "https://schema.org/InStock"
+    }
+    {%- endif %}
+  }{{ "," if not loop.last }}
+{%- endfor %}
+]
+</script>
+{%- endif %}
 {% endblock %}
 
 {% macro performanceCard(perf) %}
