@@ -17,24 +17,24 @@ export default function (eleventyConfig) {
   eleventyConfig.setLibrary("njk", njkEnvironment);
 
   ///////// PERFORMANCE LIST FILTERS /////////
-  // Dates arrive already parsed as `startsAt`; see _data/performances.js.
+  // Dates are parsed and categorised in _data/performances.js.
   eleventyConfig.addFilter("upcomingPerfs", (events) => {
     return events
-      .filter(p => classifyPerf(p) === "upcoming")
+      .filter(p => p.category === "upcoming")
       .sort((a, b) => a.startsAt - b.startsAt);
   });
 
   // 2. Recent Past: Last 2 years
   eleventyConfig.addFilter("recentPerfs", (events) => {
     return events
-      .filter(e => classifyPerf(e) === "recent")
+      .filter(e => e.category === "recent")
       .sort((a, b) => b.startsAt - a.startsAt); // Newest first
   });
 
   // 3. Archive: Older than 2 years
   eleventyConfig.addFilter("historicalPerfs", (events) => {
     return events
-      .filter(e => classifyPerf(e) === "historical")
+      .filter(e => e.category === "historical")
       .sort((a, b) => b.startsAt - a.startsAt);
   });
 
@@ -56,18 +56,4 @@ export default function (eleventyConfig) {
   };
 };
 
-// Determines which category a performance falls into. Dates are parsed and
-// validated up front in _data/performances.js.
-function classifyPerf(perf) {
-  const ageInDays =
-    (Date.now() - perf.startsAt.getTime()) / (1000 * 60 * 60 * 24);
-
-  if (ageInDays < 0.5) {
-    return "upcoming";
-  }
-  if (ageInDays < 500) {
-    return "recent";
-  }
-  return "historical";
-}
 

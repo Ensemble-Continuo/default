@@ -13,6 +13,11 @@ Site is deployed nightly using GitHub Actions (primarily to update the performan
 
 #### Part 1: generating the header image
 
+**This part is optional.** If you leave `imgUrl` out of the entry, the site
+borrows a photograph from a concert old enough to have dropped into the
+text-only "Older performances" list, so nothing appears twice on the page.
+Announce the concert now, add real artwork whenever it is ready.
+
 1) Open pixlr at https://pixlr.com/editor/
 2) Click "create new"
 3) In the right column, enter the desired dimensions of 502x283
