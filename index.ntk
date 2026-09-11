@@ -5,6 +5,33 @@ layout: main.ntk
 noWrapper: true # Ensures video takes up remaining space with no padding
 ---
 
+{% block headTags %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": {{ site.name | dump | safe }},
+  "url": {{ site.url | dump | safe }},
+  "logo": {{ (site.url + site.logo) | dump | safe }},
+  "image": {{ (site.url + site.ogImage) | dump | safe }},
+  "description": {{ site.description | dump | safe }},
+  "foundingDate": {{ site.foundingDate | dump | safe }},
+  "genre": ["Classical music", "Choral music"],
+  "areaServed": "San Francisco Bay Area",
+  "taxID": {{ site.taxId | dump | safe }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ site.address.street | dump | safe }},
+    "addressLocality": {{ site.address.locality | dump | safe }},
+    "addressRegion": {{ site.address.region | dump | safe }},
+    "postalCode": {{ site.address.postalCode | dump | safe }},
+    "addressCountry": {{ site.address.country | dump | safe }}
+  },
+  "sameAs": {{ site.sameAs | dump | safe }}
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <!-- Video controls -->
 <script>
