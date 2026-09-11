@@ -1,0 +1,26 @@
+{
+  "url": "https://ensemblecontinuo.com",
+  "name": "Ensemble Continuo",
+  "foundingDate": "2023",
+  "logo": "/images/ec_header_logo.png",
+  "ogImage": "/images/and_the_swallow_cover.png",
+  "description": "Ensemble Continuo is a classical chamber choir based in Palo Alto, California, performing repertoire from the Renaissance to the present at venues across the San Francisco Bay Area.",
+  "address": {
+    "street": "555 Waverley St",
+    "locality": "Palo Alto",
+    "region": "CA",
+    "postalCode": "94301",
+    "country": "US"
+  },
+  "taxId": "39-4827981",
+  "sameAs": [
+    "https://www.instagram.com/ensemblecontinuo/",
+    "https://www.youtube.com/@ensemblecontinuo468",
+    "https://www.facebook.com/profile.php?id=61560800301152",
+    "https://www.eventbrite.com/o/ensemble-continuo-79249690593"
+  ],
+  "excludeFromSitemap": [
+    "/old_index/",
+    "/index_black_yellow/"
+  ]
+}
