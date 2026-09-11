@@ -74,3 +74,20 @@ nav ul {
     text-shadow: 1.5px 1.5px red;
     background-color: greenyellow;
 }
+
+/*
+ * The audition form.
+ *
+ * Google Forms is on another origin, so it cannot report its own height to
+ * us and the frame has to be told one. The value is generous on purpose: too
+ * short and the form gets its own scrollbar inside the page, which is a
+ * miserable thing to fill in. Shorten it if the form ever gets shorter.
+ */
+.join-form {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: 1400px;
+    margin: 0 auto;
+    border: none;
+}
