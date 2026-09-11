@@ -1,6 +1,6 @@
 ---
 layout: main.ntk
-title: About Our Ensemble
+title: FAQs - Ensemble Continuo
 ---
 
 # FAQs
