@@ -10,13 +10,15 @@ layout: main.ntk
   Ensemble Continuo is a federally recognized 501(c)(3) nonprofit, and your donation goes directly to the choir.
 </p>
 <p>
-  We are updating how we process donations, so we are not able to accept them online at the moment. If you would like
-  to make a donation in the meantime, please <a href="/contact">contact us</a> and we will be glad to arrange it.
-</p>
-<p>
-  Thank you for helping us pay for musicians, performance venues, sheet music, and refreshments!
-</p>
-<p>
   If your employer matches charitable gifts, our Charity ID (EIN) is
   <strong>39-4827981</strong>.
 </p>
+<iframe
+  title="Donate to Ensemble Continuo"
+  width="410"
+  height="900"
+  src="https://collect.crowded.me/collection/02611810-f9f4-4ce2-a57e-3618e7b5a6c2/embedded-v2"
+  frameborder="0"
+  allowfullscreen
+  style="width:410px; max-width:100%; margin: 1.5rem auto; border-radius: 16px; box-shadow: 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.05), 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.05); border: none; display: block;"
+></iframe>
