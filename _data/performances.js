@@ -66,19 +66,25 @@ function normalize(perf) {
     timeTBD,
     startsAt,
     startDateIso: toIsoString(startsAt, timeTBD),
-    category: categorize(startsAt),
+    category: categorize(startsAt, timeTBD),
     imageIsRecycled: false,
   };
 }
 
-// Which section of the performances page an entry belongs in.
-function categorize(startsAt) {
-  const ageInDays =
-    (Date.now() - startsAt.getTime()) / (1000 * 60 * 60 * 24);
+// How long after its start a concert is assumed to be over.
+const CONCERT_LENGTH_HOURS = 3;
 
-  if (ageInDays < 0.5) {
+// Which section of the performances page an entry belongs in.
+function categorize(startsAt, timeTBD) {
+  const HOUR = 1000 * 60 * 60;
+  // Without a start time, only the day is known, so keep it listed all day.
+  const endsAt = startsAt.getTime() +
+    (timeTBD ? 24 : CONCERT_LENGTH_HOURS) * HOUR;
+  if (Date.now() < endsAt) {
     return "upcoming";
   }
+
+  const ageInDays = (Date.now() - startsAt.getTime()) / (24 * HOUR);
   if (ageInDays < 500) {
     return "recent";
   }
@@ -131,10 +137,9 @@ function hasClockTime(dateStr) {
 // Formats a date for schema.org, as local wall-clock time.
 //
 // The UTC offset is deliberately omitted. Concert times are wall-clock times
-// at the venue, but the build runs in UTC on CI and in Pacific time locally.
-// Reading the date back with local getters recovers the authored time in
-// either environment; appending an offset would shift every concert by
-// however far the build machine happens to be from the venue.
+// at the venue, and reading the date back with local getters recovers the
+// authored time; appending an offset would tie the markup to the build
+// machine's zone rather than the venue's.
 function toIsoString(date, timeTBD) {
   const pad = (n) => String(n).padStart(2, "0");
   const day = `${date.getFullYear()}-${pad(date.getMonth() + 1)}` +

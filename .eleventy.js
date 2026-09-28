@@ -1,6 +1,10 @@
 import Nunjucks from "nunjucks";
 
 export default function (eleventyConfig) {
+  // Concert times in performances.json are Pacific wall-clock times. Build in
+  // that zone everywhere -- CI runs in UTC -- so they are read as authored.
+  process.env.TZ = "America/Los_Angeles";
+
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("files");
   eleventyConfig.addPassthroughCopy("styles");
