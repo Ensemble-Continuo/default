@@ -99,7 +99,7 @@
   color: #6b6b6b;
 }
 
-/* main.css sets a global `i { color: black; margin: 10px }` — neutralise it
+/* main.css gives Font Awesome icons `color: black; margin: 10px` — neutralise it
    here so the icon row keeps the design's 22px gap. */
 .site-footer__social i {
   color: inherit;

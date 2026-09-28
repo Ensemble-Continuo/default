@@ -20,7 +20,9 @@ body {
     transition: opacity 1.5s; 
 }
 
-i {
+/* Spacing for Font Awesome icons only; a bare `i` selector would also pad
+   italic text. */
+.fa, .fab, .far, .fas {
     color: black;
     margin: 10px;
 }
