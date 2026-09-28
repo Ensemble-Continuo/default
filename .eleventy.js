@@ -11,6 +11,9 @@ export default function (eleventyConfig) {
   // Footer copyright line; the site rebuilds nightly, so this stays current.
   eleventyConfig.addGlobalData("currentYear", () => new Date().getFullYear());
 
+  // Pages are written as /about.html but served and linked as /about.
+  eleventyConfig.addFilter("cleanUrl", (url) => url.replace(/\.html$/, ""));
+
   let njkEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("_includes")
   );

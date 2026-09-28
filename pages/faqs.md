@@ -17,7 +17,7 @@ description: "How big is the choir, what do we sing, when do we rehearse, and ho
 4. What is a typical rehearsal like? 
    - Each rehearsal is designed to be both productive and musically fulfilling. We begin with a 30-minute group vocal coaching session focused on healthy technique and blending our sound. The remainder of the time is spent rehearsing our repertoire,  occasionally breaking into sectionals to master more intricate passages in a collaborative setting.  While we tackle complex repertoire, the atmosphere is supportive, friendly, and fun.
 5. What is your performance schedule for the year?
-   - Refer [here](/pages/performances.html) for our upcoming performances. 
+   - Refer [here](/performances) for our upcoming performances. 
 
 ## Auditions & Membership
 

@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:title" content="{{ title }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | cleanUrl }}">
   <meta property="og:image" content="{{ site.url }}{{ site.ogImage }}">
   <meta property="og:image:alt" content="{{ site.name }} in performance">
   {% if description %}<meta property="og:description" content="{{ description }}">
@@ -56,25 +56,25 @@
         <div class="pages">
           <ul>
             <li>
-              <h3><a href="/pages/performances.html">Performances</a></h3>
+              <h3><a href="/performances">Performances</a></h3>
             </li>
             <li>
-              <h3><a href="/pages/about_us.html">About us</a></h3>
+              <h3><a href="/about">About us</a></h3>
               </li>
               <li>
-              <h3><a href="/pages/members.html">Members</a></h3>
+              <h3><a href="/members">Members</a></h3>
             </li>
             <li>
-              <h3><a href="/pages/faqs.html">FAQs</a></h3>
+              <h3><a href="/faqs">FAQs</a></h3>
             </li>
             <li>
-              <h3><a href="/pages/join_us.html">Join us</a></h3>
+              <h3><a href="/auditions">Join us</a></h3>
             </li>
             <li>
-              <h3><a href="/pages/contact_us.html">Contact us</a></h3>
+              <h3><a href="/contact">Contact us</a></h3>
             </li>
             <li>
-              <h3><a href="/pages/donate.html">Donate</a></h3>
+              <h3><a href="/donate">Donate</a></h3>
             </li>
           </ul>
         </div>

@@ -67,7 +67,7 @@ noWrapper: true # Ensures video takes up remaining space with no padding
         title="Subscribe to our mailing list"></i>
     </a>
     <a>
-      <a href="pages/contact_us.html">
+      <a href="/contact">
         <i id="email" class="fas fa-reply fa-3x" data-toggle="tooltip" data-placement="bottom" title="Contact us"></i>
       </a>
       <br />
@@ -96,14 +96,14 @@ noWrapper: true # Ensures video takes up remaining space with no padding
     <div class="toast-header next-show-header">
       Next concert: &nbsp;
       <strong class="mr-auto">
-        <a style="color: #333" href="/pages/performances.html">{{ nextPerf.title }}</a>
+        <a style="color: #333" href="/performances">{{ nextPerf.title }}</a>
       </strong>
       <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="toast-body">
-      <a href="/pages/performances.html">{{ nextPerf.startsAt | mmm_dd_yyyy }} - {{ nextPerf.location }}</a>
+      <a href="/performances">{{ nextPerf.startsAt | mmm_dd_yyyy }} - {{ nextPerf.location }}</a>
     </div>
   </div>
   {% endif %}
