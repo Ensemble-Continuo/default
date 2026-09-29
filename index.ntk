@@ -78,7 +78,7 @@ noWrapper: true # Ensures video takes up remaining space with no padding
   </div>
 </div>
 <div id="videoBackground">
-  <video id="bgVideo" autoplay muted playsinline loop preload="auto" poster="/images/and_the_swallow_cover.png"
+  <video id="bgVideo" autoplay muted playsinline loop preload="auto" poster="/images/and_the_swallow_cover.jpg"
     onclick="toggleMute()">
     <source src="/videos/and_the_swallow.webm" type="video/webm">
     Your browser does not support HTML5 video.
