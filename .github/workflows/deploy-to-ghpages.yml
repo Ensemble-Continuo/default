@@ -19,6 +19,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Images live in git forever, so keep camera originals out. Resize to
+      # ~1600px wide before committing.
+      - name: Check image sizes
+        run: |
+          big=$(find images -type f -size +500k)
+          if [ -n "$big" ]; then
+            echo "::error::Images over 500 KB; resize them before committing:"
+            echo "$big"
+            exit 1
+          fi
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
