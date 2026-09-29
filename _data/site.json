@@ -19,8 +19,5 @@
     "https://www.facebook.com/profile.php?id=61560800301152",
     "https://www.eventbrite.com/o/ensemble-continuo-79249690593"
   ],
-  "excludeFromSitemap": [
-    "/old_index/",
-    "/index_black_yellow/"
-  ]
+  "excludeFromSitemap": []
 }
