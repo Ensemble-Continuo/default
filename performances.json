@@ -1,9 +1,11 @@
 [
   {
     "title": "Fall in Paris",
+    "imgUrl": "/images/ec_oakland_2026.webp",
     "date": "November 14, 2026 7:00 pm",
     "location": "All Saints' Episcopal Church",
     "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
+    "description": "Ensemble Continuo presents a concert with vocal works by Francis Poulenc, Claude Debussy, and Gabriel Fauré.",
     "ticketsUrl": "http://fallinparis.eventbrite.com/"
   },
   {
