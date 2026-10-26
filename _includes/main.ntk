@@ -6,7 +6,9 @@
   {% if description %}<meta name="description" content="{{ description }}">
   {% endif %}<meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Link previews on Facebook, LinkedIn, iMessage, Slack, etc. -->
+  <!-- GitHub Pages serves /about.html at /about too; tell search engines which address is the real one. -->
+  {% if page.url != "/404.html" %}<link rel="canonical" href="{{ site.url }}{{ page.url | cleanUrl }}">
+  {% endif %}<!-- Link previews on Facebook, LinkedIn, iMessage, Slack, etc. -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:title" content="{{ title }}">
