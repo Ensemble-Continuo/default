@@ -5,7 +5,7 @@ layout: main.ntk
 ---
 
 {% block headTags %}
-<link rel="stylesheet" type="text/css" href="/styles/join_us.css">
+<link rel="stylesheet" type="text/css" href="{{ '/styles/join_us.css' | fingerprint }}">
 {% endblock %}
 
 

@@ -6,7 +6,7 @@ noWrapper: true
 ---
 
 {% block headTags %}
-<link rel="stylesheet" type="text/css" href="/styles/members.css">
+<link rel="stylesheet" type="text/css" href="{{ '/styles/members.css' | fingerprint }}">
 {% endblock %}
 
 <div class="parallax"></div>

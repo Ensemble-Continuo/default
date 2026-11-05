@@ -5,7 +5,7 @@ layout: main.ntk
 ---
 
 {% block headTags %}
-<link rel="stylesheet" type="text/css" href="/styles/performances.css">
+<link rel="stylesheet" type="text/css" href="{{ '/styles/performances.css' | fingerprint }}">
 {%- set upcoming = performances | upcomingPerfs %}
 {%- if upcoming.length %}
 <script type="application/ld+json">

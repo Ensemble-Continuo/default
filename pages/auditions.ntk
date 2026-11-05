@@ -4,7 +4,7 @@ description: "We audition experienced singers year-round. Rehearsals are Thursda
 layout: main.ntk
 ---
 {% block headTags %}
-<link rel="stylesheet" type="text/css" href="/styles/join_us.css">
+<link rel="stylesheet" type="text/css" href="{{ '/styles/join_us.css' | fingerprint }}">
 {% endblock %}
 
 <h1>Sing with Ensemble Continuo</h1>

@@ -1,4 +1,6 @@
 import Nunjucks from "nunjucks";
+import crypto from "node:crypto";
+import fs from "node:fs";
 
 export default function (eleventyConfig) {
   // Concert times in performances.json are Pacific wall-clock times. Build in
@@ -17,6 +19,20 @@ export default function (eleventyConfig) {
 
   // Pages are written as /about.html but served and linked as /about.
   eleventyConfig.addFilter("cleanUrl", (url) => url.replace(/\.html$/, ""));
+
+  // Stylesheets are cached by browsers for hours, pages for minutes. Add a
+  // hash of the file's contents to its link ("/styles/main.css?v=1a2b3c4d")
+  // so a changed stylesheet gets a new address and is fetched straight away,
+  // instead of new pages being drawn with old styles.
+  const fingerprints = new Map();
+  eleventyConfig.addFilter("fingerprint", (url) => {
+    if (!fingerprints.has(url)) {
+      const contents = fs.readFileSync("." + url);
+      const hash = crypto.createHash("sha256").update(contents).digest("hex");
+      fingerprints.set(url, `${url}?v=${hash.slice(0, 8)}`);
+    }
+    return fingerprints.get(url);
+  });
 
   let njkEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("_includes")
