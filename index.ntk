@@ -49,6 +49,17 @@ noWrapper: true # Ensures video takes up remaining space with no padding
 
 {% set upcoming = performances | upcomingPerfs %}
 
+{# The review quote sits under the name over the video; on phones there is no
+   room there, so it is shown just below the video instead. #}
+{% set review %}
+<blockquote>&ldquo;It is rare to hear a performance of such artistry from a community choir.&rdquo;</blockquote>
+<figcaption>
+  Jens Ibsen,
+  <a href="https://www.sfcv.org/articles/review/amateur-singers-uncommon-ambition-ensemble-continuo-takes-frank-martin"
+    target="_blank" rel="noopener"><cite>San Francisco Classical Voice</cite></a>
+</figcaption>
+{% endset %}
+
 {# The video fills the screen below the menu, with the choir's name over it.
    The clip is "and the swallow" by Caroline Shaw, trimmed to start after its
    burned-in title. #}
@@ -62,14 +73,7 @@ noWrapper: true # Ensures video takes up remaining space with no padding
   <header class="hero__title">
     <p class="hero__place">Palo Alto, California</p>
     <h1><img class="hero__wordmark" src="/images/ec-wordmark.svg" alt="Ensemble Continuo, chamber choir"></h1>
-    <figure class="hero__quote">
-      <blockquote>&ldquo;It is rare to hear a performance of such artistry from a community choir.&rdquo;</blockquote>
-      <figcaption>
-        Jens Ibsen,
-        <a href="https://www.sfcv.org/articles/review/amateur-singers-uncommon-ambition-ensemble-continuo-takes-frank-martin"
-          target="_blank" rel="noopener"><cite>San Francisco Classical Voice</cite></a>
-      </figcaption>
-    </figure>
+    <figure class="hero__quote">{{ review | safe }}</figure>
     <button type="button" class="sound-pill" id="sound-toggle" onclick="toggleSound()">
       <i class="fas fa-volume-up"></i> <span>Turn sound on</span>
     </button>
@@ -96,6 +100,8 @@ noWrapper: true # Ensures video takes up remaining space with no padding
   </aside>
   {% endif %}
 </div>
+
+<figure class="home-press">{{ review | safe }}</figure>
 
 {% if upcoming | length > 0 %}
 <section class="home-section">
