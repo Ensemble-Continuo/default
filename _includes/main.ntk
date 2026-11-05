@@ -91,10 +91,12 @@
   </div>
   {# Inner pages open with a choir photograph and the page title over it.
      Set "banner" (an image path) and "bannerTitle" in a page's front matter;
-     "bannerPosition" moves the crop, e.g. "50% 30%". #}
+     "bannerPosition" moves the crop, e.g. "50% 30%", and
+     "bannerPositionPhone" and "bannerZoomPhone" (e.g. 1.6)
+     adjust it on phones. #}
   {% if banner %}
   <header class="page-banner">
-    <img src="{{ banner }}" alt="" style="object-position: {{ bannerPosition or 'center' }}">
+    <img src="{{ banner }}" alt="" style="--pos: {{ bannerPosition or 'center' }}{% if bannerPositionPhone %}; --pos-phone: {{ bannerPositionPhone }}{% endif %}{% if bannerZoomPhone %}; --zoom-phone: {{ bannerZoomPhone }}{% endif %}">
     <div class="page-banner__inner">
       <div class="container">
         <p class="page-banner__eyebrow">Ensemble Continuo</p>

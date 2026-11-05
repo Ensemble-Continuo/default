@@ -357,7 +357,9 @@ img.banner {
 /* Inner pages: a choir photograph across the top with the page title. */
 .page-banner {
     position: relative;
-    height: clamp(220px, 38vh, 380px);
+    /* Tied to the width, so every screen shows about the same part of the
+       photograph. */
+    height: clamp(220px, 28vw, 440px);
     overflow: hidden;
     background: #141210;
 }
@@ -367,6 +369,7 @@ img.banner {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: var(--pos);
 }
 
 .page-banner::after {
@@ -406,6 +409,12 @@ img.banner {
 @media (max-width: 600px) {
     .page-banner {
         height: 200px;
+    }
+
+    .page-banner img {
+        object-position: var(--pos-phone, var(--pos));
+        transform: scale(var(--zoom-phone, 1));
+        transform-origin: var(--pos-phone, var(--pos));
     }
 
     .page-banner h1 {

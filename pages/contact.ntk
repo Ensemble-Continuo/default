@@ -4,6 +4,8 @@ description: "Get in touch with Ensemble Continuo, a classical chamber choir bas
 layout: main.ntk
 banner: /images/media/california-theatre.jpg
 bannerPosition: "50% 100%"
+bannerPositionPhone: "50% 100%"
+bannerZoomPhone: 1.95
 bannerTitle: Contact us
 ---
 
