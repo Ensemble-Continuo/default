@@ -45,7 +45,7 @@ nav .pages h3 {
 
 /* With eight items the menu needs tighter spacing just above the width
    where it collapses into the hamburger menu. */
-@media only screen and (min-width: 1301px) and (max-width: 1500px) {
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
   nav .pages li {
     padding: 0 16px;
   }
@@ -192,4 +192,18 @@ nav a:hover {
   padding-left: 30px;
   display: flex;
     align-items: center;
+}
+/* "Ensemble Continuo / Chamber Choir" lettering, linking home. */
+.nav-wordmark {
+  display: block;
+  height: 30px;
+  width: auto;
+}
+
+/* Homepage: no logo in the menu bar, so centre the menu. */
+@media only screen and (min-width: 1301px) {
+  .is-home .navcontainer,
+  .is-home nav .pages ul {
+    justify-content: center;
+  }
 }

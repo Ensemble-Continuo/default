@@ -52,15 +52,6 @@ img.banner {
     font-family: 'Palatino Linotype', Palatino, serif;
 }
 
-.index-header {
-    font-family: 'Palatino Linotype', Palatino, serif;
-    font-size: xx-small;
-    background-color: white;
-    /*margin-top: 100;*/
-    margin-bottom: 0px;
-    padding-bottom: 1px;
-    opacity: 95%;
-}
 /*
 .parallax {
     background-video: url('../images/launch.mp4');
@@ -86,56 +77,12 @@ img.banner {
 }
 
 
-.main {
-    text-align: center;
-    margin: 30px;
-    margin-top: 0px;
-
-}
-
 .alert-link {
     color: #3D8294;
 }
 
 .alert-link:hover {
     color: #17a2b8;
-}
-
-.title {
-    margin: 10px;
-    z-index: 2000;
-}
-
-#email:hover {
-    color: #0072c6;
-}
-
-#facebook:hover {
-    color: #4267b2;
-}
-
-#github:hover {
-    color: #6e5494;
-}
-
-#headline {
-    color: black;
-}
-
-#instagram:hover {
-    color: #c13584;
-}
-
-#linkedin:hover {
-    color: #0e76a8;
-}
-
-#youtube:hover {
-    color: #ff0000;
-}
-
-#mailchimp:hover {
-    color: #dda960;
 }
 
 /* In normal flow (not fixed) so the page scrolls past the video to the
@@ -249,11 +196,6 @@ img.banner {
         margin-top: 6px;
         font-size: 12px;
     }
-}
-
-#instruction {
-    margin-top: 1em;
-    font-size: 1em;
 }
 
 .fullscreen-iframe {

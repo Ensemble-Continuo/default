@@ -1,0 +1,336 @@
+/* Homepage: full-screen video with the choir's name over it, then upcoming
+   concerts, a featured recording and the mailing list. */
+
+/* #videoBackground has a fixed height in main.css; the homepage video fills
+   the screen below the 65px menu instead. */
+#videoBackground.hero {
+    height: calc(100vh - 65px);
+    min-height: 520px;
+}
+
+.hero__shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.15) 45%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    z-index: 996;
+    padding: 0 24px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.hero__title h1 {
+    margin: 0;
+}
+
+.hero__wordmark {
+    display: block;
+    width: min(600px, 84vw);
+    margin: 0 auto 18px;
+    /* The lettering is black; turn it white over the video. */
+    filter: brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0, 0, 0, 0.45));
+}
+
+.hero__title p {
+    margin: 0 0 16px;
+    font-size: 22px;
+}
+
+.sound-pill {
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    font-size: 14px;
+    text-shadow: none;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.sound-pill i {
+    margin: 0 6px 0 0;
+    color: #fff;
+}
+
+.sound-pill:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* Sections below the video. */
+.home-section {
+    padding: 56px 0;
+    font-family: 'Palatino Linotype', Palatino, serif;
+}
+
+.home-section h2 {
+    font-size: 28px;
+}
+
+.home-section__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-bottom: 20px;
+}
+
+.home-section__head a,
+.home-section__head a:visited {
+    color: #1a1a1a;
+    border-bottom: 1px solid #999;
+}
+
+.home-concerts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.home-concert,
+.home-concert:visited,
+.home-concert:hover {
+    display: block;
+    color: #1a1a1a;
+}
+
+.home-concert img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: transform 300ms ease;
+}
+
+.home-concert:hover img {
+    transform: translateY(-3px);
+}
+
+.home-concert__when {
+    display: block;
+    color: #8a6d00;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.home-concert__title {
+    display: block;
+    margin: 2px 0;
+    font-size: 21px;
+}
+
+.home-concert__where {
+    display: block;
+    color: #666;
+    font-size: 14px;
+}
+
+.home-concert__cta {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.home-section--dark {
+    background: #141210;
+    color: #eee;
+}
+
+.home-section--dark h2 {
+    color: #fff;
+}
+
+.home-section--dark p {
+    color: #aaa;
+}
+
+.home-watch {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 36px;
+    align-items: center;
+}
+
+.home-watch__thumb {
+    position: relative;
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.home-watch__thumb img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.home-watch__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.home-watch__play::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -6px;
+    border-style: solid;
+    border-width: 11px 0 11px 18px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.home-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: #F9E076;
+    color: #333;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.home-btn,
+.home-btn:visited {
+    display: inline-block;
+    padding: 11px 20px;
+    border: 1px solid #1a1a1a;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.home-btn:hover {
+    background: #444;
+    color: #fff;
+}
+
+.home-btn--ghost,
+.home-btn--ghost:visited {
+    background: transparent;
+    color: #1a1a1a;
+}
+
+.home-btn--ghost:hover {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.home-btn--light,
+.home-btn--light:visited {
+    background: #fff;
+    border-color: #fff;
+    color: #1a1a1a;
+}
+
+.home-btn--light:hover {
+    background: #e8e8e8;
+    color: #1a1a1a;
+}
+
+.home-signup {
+    text-align: center;
+    background: #faf7ef;
+}
+
+.home-signup p {
+    color: #555;
+    font-size: 17px;
+}
+
+.home-signup .home-btn {
+    margin: 6px 4px 0;
+}
+
+/* Narrower screens: the centred name would run into the next-concert card,
+   so make it smaller and set it lower. */
+@media (max-width: 1260px) {
+    .hero__wordmark {
+        width: min(440px, 80vw);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1100px) {
+    .hero__title {
+        bottom: 56px;
+    }
+
+    .hero__wordmark {
+        width: 400px;
+        margin-bottom: 12px;
+    }
+
+    .hero__title p {
+        margin-bottom: 12px;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 900px) {
+    .home-concerts,
+    .home-watch {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Phones: the name sits at the top of the video, the next-concert strip at
+   the bottom; the review quote is left to the About and Media pages. */
+@media (max-width: 600px) {
+    #videoBackground.hero {
+        height: calc(100svh - 65px);
+    }
+
+    .hero__shade {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.25) 45%, transparent 65%);
+    }
+
+    .hero__title {
+        top: 14%;
+        bottom: auto;
+    }
+
+    .hero__title p {
+        font-size: 16px;
+    }
+
+    .hero .video-quote {
+        display: none;
+    }
+
+    .sound-pill {
+        font-size: 12px;
+    }
+}
