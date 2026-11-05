@@ -110,6 +110,41 @@
     background: rgba(0, 0, 0, 0.75);
 }
 
+/* Phone-only copy of the review quote, just below the video. */
+.home-press {
+    display: none;
+    margin: 0;
+    padding: 32px 24px 8px;
+    text-align: center;
+    font-family: 'Palatino Linotype', Palatino, serif;
+}
+
+.home-press blockquote {
+    margin: 0 auto;
+    max-width: 30ch;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.4;
+    text-wrap: balance;
+}
+
+.home-press figcaption {
+    margin-top: 10px;
+    color: #666;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+}
+
+.home-press figcaption::before {
+    content: "\2014\00a0";
+}
+
+.home-press a,
+.home-press a:visited {
+    color: #666;
+    border-bottom: 1px solid #bbb;
+}
+
 /* Sections below the video. */
 .home-section {
     padding: 56px 0;
@@ -347,8 +382,8 @@
     }
 }
 
-/* Phones: the name and quote sit at the top of the video, the next-concert
-   strip at the bottom. */
+/* Phones: the name sits at the top of the video, the next-concert strip at
+   the bottom, and the review quote just below the video. */
 @media (max-width: 600px) {
     #videoBackground.hero {
         height: calc(100svh - 65px);
@@ -374,15 +409,15 @@
     }
 
     .hero__quote {
-        margin-bottom: 14px;
+        display: none;
     }
 
-    .hero__quote blockquote {
-        font-size: 17px;
+    .home-press {
+        display: block;
     }
 
-    .hero__quote figcaption {
-        font-size: 12px;
+    .home-press + .home-section {
+        padding-top: 32px;
     }
 
     .sound-pill {
