@@ -416,3 +416,16 @@ img.banner {
         font-size: 11px;
     }
 }
+
+/* Inner pages sit on a warm off-white, like a concert programme; the
+   homepage keeps its own white and dark sections. */
+body:not(.is-home),
+body:not(.is-home) .navcontainer,
+body:not(.is-home) nav.stroke,
+body:not(.is-home) .site-footer {
+    background-color: #faf7f2;
+}
+
+body:not(.is-home) nav ul {
+    background-color: transparent;
+}
