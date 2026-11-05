@@ -1,118 +1,44 @@
-a {
-    text-decoration: none;
-    color: black;
-}
+/* Members page: the singers by voice part, in two columns. */
 
-a:hover {
-    text-decoration: none;
-    color: black;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    opacity: 0; 
-    transition: opacity 1.5s; 
-}
-
-nav li {
-    margin: 0;
-    padding: 0 30px;
-    float: right;
-}
-
-nav ul {
-    list-style: none;
-}
-
-.btn {
-    padding: .2rem .2rem;
-}
-
-.container {
-    background-color: white;
-    font-family: 'Palatino Linotype', Palatino, serif;
+.members {
     text-align: center;
-    position: absolute; /* Added */
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%); 
-    width: 80%; 
-    opacity:75%
+    padding-bottom: 48px;
 }
 
-.container h1 {
-    text-align: center;
+.members__conductor {
+    margin-bottom: 28px;
+    font-size: 20px;
 }
 
 #members {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
-.divisi {
-    height: 20px;
-}
-
-.member-row {
+#members td {
+    padding: 0 70px;
     vertical-align: top;
 }
 
-td {
-    padding: 0 70px;
+#members td i {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #8a6d00;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
 }
 
-#demo p {
-    margin-bottom: 0px;
+.divisi {
+    height: 28px;
 }
 
-.parallax {
-    background-image: url('/images/behind sakena.jpg');
-    height: 400px; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-@media only screen and (max-width: 1000px) {
-    .parallax {
-        height: 1000px;
-        background-attachment: fixed;
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
+@media (max-width: 600px) {
+    #members td {
+        padding: 0 10px;
+        font-size: 16px;
     }
-
-        .container {
-            width: 95%;
-            top: 5%;
-        }
-
-        td {
-            padding: 0 10px;
-            font-size: 1.1em;
-        }
-}
-
-#title {
-    padding-top: 70px;
-}
-
-#sma {
-    text-decoration: underline;
-    color: black;
-}
-
-#sma:hover {
-    text-decoration: underline;
-    color: blue;
-}
-
-#sma:visited {
-    text-decoration: none;
 }

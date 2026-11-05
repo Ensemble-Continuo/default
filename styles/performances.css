@@ -96,12 +96,7 @@ form {
 }
 
 .container {
-    background-color: white;
     font-family: 'Palatino Linotype', Palatino, serif;
-}
-
-.container h1 {
-    text-align: center;
 }
 
 /* container */

@@ -353,3 +353,66 @@ img.banner {
         letter-spacing: 0.08em;
     }
 }
+
+/* Inner pages: a choir photograph across the top with the page title. */
+.page-banner {
+    position: relative;
+    height: clamp(220px, 38vh, 380px);
+    overflow: hidden;
+    background: #141210;
+}
+
+.page-banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.2) 55%, rgba(0, 0, 0, 0.05) 100%);
+}
+
+.page-banner__inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 26px;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+.page-banner__eyebrow {
+    margin: 0 0 4px;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.page-banner h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.has-banner #maintext {
+    padding-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .page-banner {
+        height: 200px;
+    }
+
+    .page-banner h1 {
+        font-size: 34px;
+    }
+
+    .page-banner__eyebrow {
+        font-size: 11px;
+    }
+}

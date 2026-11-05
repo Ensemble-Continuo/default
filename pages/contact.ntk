@@ -2,6 +2,9 @@
 title: "Contact Us — Palo Alto, CA | Ensemble Continuo"
 description: "Get in touch with Ensemble Continuo, a classical chamber choir based in Palo Alto, California — questions about concerts, auditions and bookings."
 layout: main.ntk
+banner: /images/media/california-theatre.jpg
+bannerPosition: "50% 100%"
+bannerTitle: Contact us
 ---
 
 {% block headTags %}
@@ -9,8 +12,6 @@ layout: main.ntk
 {% endblock %}
 
 
-<h1>Contact us</h1>
-<hr>
 <p>
     Use this form to contact Ensemble Continuo. We love feedback from audience members!
 </p>

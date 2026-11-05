@@ -2,10 +2,11 @@
 title: "Support Our Choir | Ensemble Continuo"
 description: "Support Ensemble Continuo, a 501(c)(3) nonprofit chamber choir in Palo Alto. Your gift funds operating and performing expenses for live choral music in the Bay Area."
 layout: main.ntk
+banner: /images/media/chicago-holy-name.jpg
+bannerPosition: "50% 82%"
+bannerTitle: Support the choir
 ---
 
-<h1>Donate</h1>
-<hr>
 <p>
   Ensemble Continuo is a federally recognized 501(c)(3) nonprofit, and your donation goes directly to the choir.
 </p>
