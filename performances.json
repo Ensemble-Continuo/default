@@ -1,7 +1,16 @@
 [
   {
+    "title": "Messiah Sing-Along",
+    "imgUrl": "/images/2612_messiah_sing_along.jpg",
+    "date": "December 18, 2026 7:30 pm",
+    "location": "All Saints' Episcopal Church",
+    "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
+    "description": "Sing Handel's <i>Messiah</i> with Ensemble Continuo and a chamber orchestra conducted by Diego Hernandez. Bring your own vocal score or a digital copy; no printed scores will be available. Free admission; donations support Music for Minors.",
+    "ticketsUrl": "https://messiahsingalong.eventbrite.com/"
+  },
+  {
     "title": "Fall in Paris",
-    "imgUrl": "/images/ec_oakland_2026.webp",
+    "imgUrl": "/images/2611_fall_in_paris.jpg",
     "date": "November 14, 2026 7:00 pm",
     "location": "All Saints' Episcopal Church",
     "locationUrl": "https://maps.app.goo.gl/vP2MkWfHHF59Rq6i9",
@@ -35,7 +44,7 @@
     "ticketsUrl": "https://handel.eventbrite.com/"
   },
   {
-    "title": "Baroque and Bronze",
+    "title": "We chime",
     "imgUrl": "/images/carillon.png",
     "date": "February 28, 2026 7:00 pm",
     "location": "St. Jude's Episcopal Church",
