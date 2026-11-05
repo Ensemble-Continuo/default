@@ -10,7 +10,12 @@
 
 .screening h1 {
     color: #fff;
-    font-size: 40px;
+    font-size: 48px;
+}
+
+/* Same small line above the title as the photo banners on other pages. */
+.screening .page-banner__eyebrow {
+    color: #ccc;
 }
 
 .media-intro {

@@ -13,6 +13,7 @@ noWrapper: true
 
 <section class="screening">
   <div class="container">
+    <p class="page-banner__eyebrow">Ensemble Continuo</p>
     <h1>Media</h1>
     <p class="media-intro">Concert recordings and photographs of Ensemble Continuo. Choose a piece from the list to play it.</p>
 
