@@ -56,7 +56,7 @@ layout: main.ntk
 {% macro performanceCard(perf) %}
 <div class="col perf-card-col">
   <div class="card h-100">
-    {% if perf.ticketsUrl %}
+    {% if perf.ticketsUrl and perf.category == "upcoming" %}
     <a href="{{ perf.ticketsUrl }}" target="_blank">
       <img src="{{ perf.imgUrl }}" class="card-img-top" alt="{{ perf.title }}">
     </a>
@@ -76,7 +76,7 @@ layout: main.ntk
 
       <p class="card-text">{{ perf.description | safe }}</p>
 
-      {% if perf.ticketsUrl %}
+      {% if perf.ticketsUrl and perf.category == "upcoming" %}
       <p><a href="{{ perf.ticketsUrl }}" id="link" class="card-link" target="_blank">Reserve a seat</a>.</p>
       {% endif %}
 
@@ -161,7 +161,6 @@ layout: main.ntk
 </div>
 
 <h2>Older performances</h2>
-<ul id="historical_perfs">
+<div id="historical_perfs">
   {{ performanceList(performances | historicalPerfs) }}
-</ul>
 </div>
