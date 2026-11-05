@@ -52,14 +52,6 @@ noWrapper: true # Ensures video takes up remaining space with no padding
   <div class="main">
     <h2 class="title"><b>ENSEMBLE CONTINUO</b></h2>
     <h3 id="headline">We are a classical chamber choir based in Palo Alto, California. </h3>
-    <figure class="press-quote">
-      <blockquote>&ldquo;It is rare to hear a performance of such artistry from a community choir.&rdquo;</blockquote>
-      <figcaption>
-        Jens Ibsen,
-        <a href="https://www.sfcv.org/articles/review/amateur-singers-uncommon-ambition-ensemble-continuo-takes-frank-martin"
-          target="_blank" rel="noopener"><cite>San Francisco Classical Voice</cite></a>
-      </figcaption>
-    </figure>
     <a href="https://www.instagram.com/ensemblecontinuo/" target="_blank">
       <i id="instagram" class="fab fa-instagram fa-3x" data-toggle="tooltip" data-placement="bottom"
         title="Instagram"></i>

@@ -167,47 +167,6 @@ img.banner {
 }
 
 
-/* Review quote under the homepage headline. */
-.press-quote {
-    max-width: 640px;
-    margin: 6px auto 4px;
-    padding: 0 16px;
-}
-
-.press-quote blockquote {
-    margin: 0;
-    font-size: 20px;
-    font-style: italic;
-    line-height: 1.4;
-    color: #333;
-}
-
-.press-quote figcaption {
-    margin-top: 6px;
-    font-size: 13px;
-    letter-spacing: 0.06em;
-    color: #666;
-}
-
-.press-quote figcaption::before {
-    content: "\2014\00a0";
-}
-
-.press-quote cite {
-    font-style: italic;
-}
-
-.press-quote a,
-.press-quote a:visited {
-    color: #666;
-    border-bottom: 1px solid #ccc;
-}
-
-.press-quote a:hover {
-    color: #111;
-    border-bottom-color: #111;
-}
-
 #instruction {
     margin-top: 1em;
     font-size: 1em;
