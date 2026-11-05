@@ -66,15 +66,14 @@ noWrapper: true # Ensures video takes up remaining space with no padding
       <i id="mailchimp" class="fa fa-envelope fa-3x" data-toggle="tooltip" data-placement="bottom"
         title="Subscribe to our mailing list"></i>
     </a>
-    <a>
-      <a href="/contact">
-        <i id="email" class="fas fa-reply fa-3x" data-toggle="tooltip" data-placement="bottom" title="Contact us"></i>
-      </a>
-      <br />
-      <h4 id="instruction">
-        Click below to hear And The Swallow by Caroline Shaw. Full recording on <a
-          href="https://www.youtube.com/watch?v=IfXHkO8XKhQ" target="_blank">YouTube</a>.<br>
-      </h4>
+    <a href="/contact">
+      <i id="email" class="fas fa-reply fa-3x" data-toggle="tooltip" data-placement="bottom" title="Contact us"></i>
+    </a>
+    <br />
+    <h4 id="instruction">
+      Click below to hear And The Swallow by Caroline Shaw. Full recording on <a
+        href="https://www.youtube.com/watch?v=IfXHkO8XKhQ" target="_blank">YouTube</a>.<br>
+    </h4>
   </div>
 </div>
 <div id="videoBackground">
@@ -98,7 +97,8 @@ noWrapper: true # Ensures video takes up remaining space with no padding
       <strong class="mr-auto">
         <a style="color: #333" href="/performances">{{ nextPerf.title }}</a>
       </strong>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <button type="button" class="ml-2 mb-1 close" aria-label="Close"
+        onclick="this.closest('.toast').remove()">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
