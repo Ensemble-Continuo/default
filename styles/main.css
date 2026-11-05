@@ -432,3 +432,58 @@ img.banner {
         font-size: 18px;
     }
 }
+
+/* About page photographs. */
+.about-figure {
+    margin: 28px 0;
+}
+
+.about-figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: 50% 55%;
+    border-radius: 6px;
+}
+
+.about-figure figcaption {
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.about-portrait {
+    float: right;
+    width: 180px;
+    margin: 6px 0 12px 28px;
+    border-radius: 6px;
+}
+
+.about-media-link {
+    clear: both;
+    margin: 36px 0 48px;
+    padding-top: 24px;
+    border-top: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.about-media-link a,
+.about-media-link a:visited {
+    color: #1a1a1a;
+    border-bottom: 1px solid #999;
+}
+
+.about-media-link a:hover {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+@media (max-width: 600px) {
+    .about-portrait {
+        float: none;
+        display: block;
+        width: 60%;
+        margin: 8px auto 20px;
+    }
+}

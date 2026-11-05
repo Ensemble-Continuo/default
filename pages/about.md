@@ -10,6 +10,11 @@ Ensemble Continuo is an adult classical chamber choir based in Palo Alto, Califo
 
 Founded in 2023, the choir has established a vibrant presence in the Bay Area. With about 32 singers ranging in age from 16–65, Ensemble Continuo comprises singers from all backgrounds brought together by their passion for classical repertoire. In a 2026 review, [San Francisco Classical Voice said of the ensemble][SFCV Martin review], “It is rare to hear a performance of such artistry from a community choir.”
 
+<figure class="about-figure">
+  <img src="/images/media/oakland-group-2026.jpg" alt="Ensemble Continuo in concert black, standing in rows at the Cathedral of Christ the Light in Oakland">
+  <figcaption>Ensemble Continuo at the Cathedral of Christ the Light, Oakland, 2026</figcaption>
+</figure>
+
 Ensemble Continuo seeks to:
 
 - Provide a welcoming environment for experienced singers to grow and connect, offering artistic development through high-caliber instruction, voice coaching, and challenging repertoire.
@@ -22,6 +27,10 @@ Ensemble Continuo is currently the choir-in-residence at All Saints’ Episcopal
 
 ## About Our Musical Director
 
+<img class="about-portrait" src="/images/christopher-pluntke.jpg" alt="Christopher Pluntke, founder and musical director of Ensemble Continuo">
+
 Founder and musical director of Ensemble Continuo, Christopher Pluntke, graduated from the Hochschule für Musik Würzburg in 2007 and has 25 years of experience leading vocal ensembles, period instrument groups, and performing as organist, pianist and continuo player. After obtaining his PhD at UCL, he moved to the Bay Area, where he has been active as conductor, pianist, and organist. He has served as music director and organist at All Saints' Episcopal Church in Palo Alto since January 2025.
+
+<p class="about-media-link"><a href="/media">Watch our concert recordings and see photos from our performances &rarr;</a></p>
 
 [SFCV Martin review]: https://www.sfcv.org/articles/review/amateur-singers-uncommon-ambition-ensemble-continuo-takes-frank-martin
