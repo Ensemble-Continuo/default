@@ -1,0 +1,149 @@
+---
+title: "Concert Videos & Photos | Ensemble Continuo"
+description: "Watch concert recordings of Ensemble Continuo, a chamber choir in Palo Alto, and see photographs from our performances across the Bay Area."
+layout: main.ntk
+noWrapper: true
+---
+{% block headTags %}
+<link rel="stylesheet" type="text/css" href="{{ '/styles/media.css' | fingerprint }}">
+{% endblock %}
+
+{# Videos and photos are listed in _data/media.json. #}
+{% set first = media.videos | first %}
+
+<section class="screening">
+  <div class="container">
+    <h1>Media</h1>
+    <p class="media-intro">Concert recordings and photographs of Ensemble Continuo. Choose a piece from the list to play it.</p>
+
+    <div class="screening__layout">
+      <div class="screening__now">
+        {# Shows the thumbnail until someone presses play, so YouTube only
+           loads when a video is actually watched. #}
+        <a class="media-player" id="player" href="https://www.youtube.com/watch?v={{ first.id }}"
+          data-id="{{ first.id }}" data-title="{{ first.title }}" target="_blank" rel="noopener"
+          aria-label="Play {{ first.title }}">
+          <img id="player-thumb" src="/images/media/yt-{{ first.id }}.jpg" alt="">
+          <span class="media-player__play"></span>
+          <span class="media-player__time" id="player-time">{{ first.duration }}</span>
+        </a>
+        <h2 id="player-title">{{ first.title }}</h2>
+        <p id="player-meta">{{ first.meta }}</p>
+      </div>
+
+      <div>
+        <p class="screening__count">{{ media.videos | length }} recordings</p>
+        <ul class="playlist">
+          {% for v in media.videos %}
+          <li>
+            <a class="playlist__item{{ ' is-playing' if loop.first }}" href="https://www.youtube.com/watch?v={{ v.id }}"
+              target="_blank" rel="noopener"
+              data-id="{{ v.id }}" data-title="{{ v.title }}" data-meta="{{ v.meta }}" data-duration="{{ v.duration }}">
+              <span class="media-player media-player--small">
+                <img src="/images/media/yt-{{ v.id }}.jpg" alt="" loading="lazy">
+                <span class="media-player__play"></span>
+                <span class="media-player__time">{{ v.duration }}</span>
+              </span>
+              <span class="playlist__text">
+                <span class="playlist__title">{{ v.title }}</span>
+                <span class="playlist__meta">{{ v.meta }}</span>
+              </span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        <a class="screening__channel" href="https://www.youtube.com/@ensemblecontinuo468" target="_blank" rel="noopener">More on our YouTube channel &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container media-below">
+  <h2 class="media-h2">Photos</h2>
+  <div class="media-photos bento">
+    {% for p in media.photos %}
+    <figure>
+      <a class="lightbox-link" href="/images/media/{{ p.file }}" data-caption="{{ p.caption }}">
+        <img src="/images/media/{{ p.file }}" alt="{{ p.caption }}" loading="lazy">
+      </a>
+      <figcaption>{{ p.caption }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+
+  <div class="media-press">
+    <blockquote>&ldquo;It is rare to hear a performance of such artistry from a community choir.&rdquo;</blockquote>
+    <cite>Jens Ibsen,
+      <a href="https://www.sfcv.org/articles/review/amateur-singers-uncommon-ambition-ensemble-continuo-takes-frank-martin"
+        target="_blank" rel="noopener">San Francisco Classical Voice</a></cite>
+    <div class="media-press__links">
+      <a class="media-btn" href="/performances">Upcoming concerts</a>
+      <a class="media-btn media-btn--ghost" href="https://www.youtube.com/@ensemblecontinuo468" target="_blank" rel="noopener">YouTube channel</a>
+    </div>
+  </div>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo">
+  <button type="button" class="lightbox__close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+  <p id="lightbox-caption"></p>
+</dialog>
+
+<script>
+  (function () {
+    // Playlist: choosing a recording loads it into the large player and plays it.
+    var player = document.getElementById("player");
+    var items = document.querySelectorAll(".playlist__item");
+
+    function embed(id, title) {
+      var frame = document.createElement("iframe");
+      frame.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+      frame.title = title;
+      frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      frame.allowFullscreen = true;
+      frame.className = "media-player__frame";
+      player.replaceChildren(frame);
+      player.removeAttribute("href");
+      player.classList.add("is-embedded");
+    }
+
+    player.addEventListener("click", function (e) {
+      if (player.classList.contains("is-embedded")) return;
+      e.preventDefault();
+      embed(player.dataset.id, player.dataset.title);
+    });
+
+    items.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+        items.forEach(function (i) { i.classList.remove("is-playing"); });
+        item.classList.add("is-playing");
+        player.dataset.id = item.dataset.id;
+        player.dataset.title = item.dataset.title;
+        document.getElementById("player-title").textContent = item.dataset.title;
+        document.getElementById("player-meta").textContent = item.dataset.meta;
+        embed(item.dataset.id, item.dataset.title);
+        // On narrow screens the list sits below the player; bring it back into view.
+        if (player.getBoundingClientRect().top < 0) {
+          player.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+
+    // Photos open larger in a lightbox.
+    var box = document.getElementById("lightbox");
+    if (!box.showModal) return;
+    document.querySelectorAll(".lightbox-link").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("lightbox-img").src = link.href;
+        document.getElementById("lightbox-img").alt = link.dataset.caption;
+        document.getElementById("lightbox-caption").textContent = link.dataset.caption;
+        box.showModal();
+      });
+    });
+    box.addEventListener("click", function (e) {
+      if (e.target === box || e.target.classList.contains("lightbox__close")) box.close();
+    });
+  })();
+</script>

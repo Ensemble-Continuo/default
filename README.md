@@ -66,3 +66,21 @@ the wrong date:
     "ticketsUrl": "https://www.eventbrite.com/e/britten-a-ceremony-of-carols-tickets-1045064795937?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
   },
  
+### To update the Media page
+
+Videos and photos on `/media` are listed in `_data/media.json`, newest first.
+The first video is the one shown in the large player.
+
+**Add a video:** add an entry at the top of `"videos"`:
+
+    { "id": "y0RJF7HMSis", "title": "Händel: Dixit Dominus",
+      "meta": "All Saints', Palo Alto · April 2026", "duration": "6:21" }
+
+`id` is the part after `watch?v=` in the YouTube link. Then save the video's
+thumbnail as `images/media/yt-<id>.jpg` (640×360): open
+`https://i.ytimg.com/vi/<id>/maxresdefault.jpg`, save it, and resize it.
+
+**Add a photo:** resize it to about 1600px on the long side, save it in
+`images/media/`, and add `{ "file": "name.jpg", "caption": "Where · when" }`
+to `"photos"`. The first photo is shown large. Keep the number of photos at
+9, 13 or 17 so the grid has no gaps.
