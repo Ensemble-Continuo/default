@@ -13,7 +13,6 @@ body {
   height: 100%;
   font-family: 'Palatino Linotype', Palatino, serif;
   background-color: white;
-  opacity: 90%;
   position: relative;
   z-index: 3000;
   display: flex;

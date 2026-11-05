@@ -35,11 +35,10 @@ h2 {
 }
 
 form {
-    margin-top: -40px;
     text-align: center;
     padding-top: 10px;
     border-radius: 10px;
-    background-color: #f8f8f8;
+    background-color: #f2ece1;
 }
 
 .card {
