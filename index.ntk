@@ -6,6 +6,7 @@ noWrapper: true # Ensures video takes up remaining space with no padding
 ---
 
 {% block headTags %}
+<link rel="stylesheet" type="text/css" href="{{ '/styles/home.css' | fingerprint }}">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,50 +34,39 @@ noWrapper: true # Ensures video takes up remaining space with no padding
 {% endblock %}
 
 {% block content %}
-<!-- Video controls -->
 <script>
-  function toggleMute() {
+  // The video starts muted (browsers only autoplay silent video); the button
+  // and a click on the video switch the sound on and off.
+  function toggleSound() {
     var video = document.getElementById("bgVideo");
-    //var button = document.getElementById("muteButton");
-    if (video.muted) {
-      video.muted = false;
-      //button.innerHTML = "Mute";
-    } else {
-      video.muted = true;
-      //button.innerHTML = "Unmute";
-    }
+    var button = document.getElementById("sound-toggle");
+    video.muted = !video.muted;
+    if (!video.muted) video.play();
+    button.querySelector("span").textContent = video.muted ? "Turn sound on" : "Turn sound off";
+    button.querySelector("i").className = video.muted ? "fas fa-volume-up" : "fas fa-volume-mute";
   }
 </script>
 
-<div class="index-header">
-  <div class="main">
-    <h2 class="title"><b>ENSEMBLE CONTINUO</b></h2>
-    <h3 id="headline">We are a classical chamber choir based in Palo Alto, California. </h3>
-    <a href="https://www.instagram.com/ensemblecontinuo/" target="_blank">
-      <i id="instagram" class="fab fa-instagram fa-3x" data-toggle="tooltip" data-placement="bottom"
-        title="Instagram"></i>
-    </a>
-    <a href="https://www.youtube.com/@ensemblecontinuo468" target="_blank">
-      <i id="youtube" class="fab fa-youtube fa-3x" data-toggle="tooltip" data-placement="bottom" title="YouTube"></i>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61560800301152" target="_blank">
-      <i id="facebook" class="fab fa-facebook fa-3x" data-toggle="tooltip" data-placement="bottom" title="Facebook"></i>
-    </a>
-    <a href="https://ensemble-continuo.us22.list-manage.com/subscribe?u=fdf6765d2687403e924ccc48f&id=b637d06d3f">
-      <i id="mailchimp" class="fa fa-envelope fa-3x" data-toggle="tooltip" data-placement="bottom"
-        title="Subscribe to our mailing list"></i>
-    </a>
-    <a href="/contact">
-      <i id="email" class="fas fa-reply fa-3x" data-toggle="tooltip" data-placement="bottom" title="Contact us"></i>
-    </a>
-    <br />
-    <h4 id="instruction">
-      Click below to hear And The Swallow by Caroline Shaw. Full recording on <a
-        href="https://www.youtube.com/watch?v=IfXHkO8XKhQ" target="_blank">YouTube</a>.<br>
-    </h4>
-  </div>
-</div>
-<div id="videoBackground">
+{% set upcoming = performances | upcomingPerfs %}
+
+{# The video fills the screen below the menu, with the choir's name over it.
+   The clip is "and the swallow" by Caroline Shaw, trimmed to start after its
+   burned-in title. #}
+<div id="videoBackground" class="hero">
+  <video id="bgVideo" autoplay muted playsinline loop preload="auto" poster="/images/and_the_swallow_cover.jpg"
+    onclick="toggleSound()">
+    <source src="{{ '/videos/and_the_swallow.webm' | fingerprint }}" type="video/webm">
+  </video>
+  <div class="hero__shade"></div>
+
+  <header class="hero__title">
+    <h1><img class="hero__wordmark" src="/images/ec-wordmark.svg" alt="Ensemble Continuo, chamber choir"></h1>
+    <p>Palo Alto, California</p>
+    <button type="button" class="sound-pill" id="sound-toggle" onclick="toggleSound()">
+      <i class="fas fa-volume-up"></i> <span>Turn sound on</span>
+    </button>
+  </header>
+
   {# Review quote overlaid on the hero video (see .video-quote in main.css). #}
   <figure class="video-quote">
     <blockquote>&ldquo;It is rare to hear a performance of such artistry from a community choir.&rdquo;</blockquote>
@@ -86,15 +76,9 @@ noWrapper: true # Ensures video takes up remaining space with no padding
         target="_blank" rel="noopener"><cite>San Francisco Classical Voice</cite></a>
     </figcaption>
   </figure>
-  <video id="bgVideo" autoplay muted playsinline loop preload="auto" poster="/images/and_the_swallow_cover.jpg"
-    onclick="toggleMute()">
-    <source src="/videos/and_the_swallow.webm" type="video/webm">
-    Your browser does not support HTML5 video.
-  </video>
 
-  {# Pinned over the hero video (see .next-concert in main.css). The whole
-     card links to the ticket page, or to Performances if there is none yet. #}
-  {% set upcoming = performances | upcomingPerfs %}
+  {# The whole card links to the ticket page, or to Performances if there is
+     none yet (see .next-concert in main.css). #}
   {% if upcoming | length > 0 %}
   {% set nextPerf = upcoming | first %}
   <aside class="next-concert" aria-label="Next concert">
@@ -114,5 +98,53 @@ noWrapper: true # Ensures video takes up remaining space with no padding
   </aside>
   {% endif %}
 </div>
+
+{% if upcoming | length > 0 %}
+<section class="home-section">
+  <div class="container">
+    <div class="home-section__head">
+      <h2>Upcoming concerts</h2>
+      <a href="/performances">All performances &rarr;</a>
+    </div>
+    <div class="home-concerts">
+      {% for p in upcoming %}{% if loop.index <= 3 %}
+      <a class="home-concert" {% if p.ticketsUrl %}href="{{ p.ticketsUrl }}" target="_blank" rel="noopener"{% else %}href="/performances"{% endif %}>
+        <img src="{{ p.imgUrl }}" alt="" loading="lazy">
+        <span class="home-concert__when">{{ p | concertWhen }}</span>
+        <span class="home-concert__title">{{ p.title }}</span>
+        <span class="home-concert__where">{{ p.location }}</span>
+        <span class="home-concert__cta">{{ "Get tickets" if p.ticketsUrl else "Details" }} &rarr;</span>
+      </a>
+      {% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% set video = media.videos | first %}
+<section class="home-section home-section--dark">
+  <div class="container home-watch">
+    <a class="home-watch__thumb" href="/media" aria-label="Watch {{ video.title }}">
+      <img src="/images/media/yt-{{ video.id }}.jpg" alt="" loading="lazy">
+      <span class="home-watch__play"></span>
+    </a>
+    <div>
+      <span class="home-eyebrow">Watch &amp; listen</span>
+      <h2>{{ video.title }}</h2>
+      <p>{{ video.meta }}</p>
+      <a class="home-btn home-btn--light" href="/media">See all {{ media.videos | length }} recordings &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section home-signup">
+  <div class="container">
+    <h2>Hear about our next concert first</h2>
+    <p>A short email before each concert.</p>
+    <a class="home-btn" href="https://ensemble-continuo.us22.list-manage.com/subscribe?u=fdf6765d2687403e924ccc48f&amp;id=b637d06d3f"
+      target="_blank" rel="noopener">Join our mailing list</a>
+    <a class="home-btn home-btn--ghost" href="/auditions">Sing with us</a>
+  </div>
+</section>
 
 {% endblock %}
