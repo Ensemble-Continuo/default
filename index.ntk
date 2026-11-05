@@ -60,22 +60,20 @@ noWrapper: true # Ensures video takes up remaining space with no padding
   <div class="hero__shade"></div>
 
   <header class="hero__title">
+    <p class="hero__place">Palo Alto, California</p>
     <h1><img class="hero__wordmark" src="/images/ec-wordmark.svg" alt="Ensemble Continuo, chamber choir"></h1>
-    <p>Palo Alto, California</p>
+    <figure class="hero__quote">
+      <blockquote>&ldquo;It is rare to hear a performance of such artistry from a community choir.&rdquo;</blockquote>
+      <figcaption>
+        Jens Ibsen,
+        <a href="https://www.sfcv.org/articles/review/amateur-singers-uncommon-ambition-ensemble-continuo-takes-frank-martin"
+          target="_blank" rel="noopener"><cite>San Francisco Classical Voice</cite></a>
+      </figcaption>
+    </figure>
     <button type="button" class="sound-pill" id="sound-toggle" onclick="toggleSound()">
       <i class="fas fa-volume-up"></i> <span>Turn sound on</span>
     </button>
   </header>
-
-  {# Review quote overlaid on the hero video (see .video-quote in main.css). #}
-  <figure class="video-quote">
-    <blockquote>&ldquo;It is rare to hear a performance of such artistry from a community choir.&rdquo;</blockquote>
-    <figcaption>
-      Jens Ibsen,
-      <a href="https://www.sfcv.org/articles/review/amateur-singers-uncommon-ambition-ensemble-continuo-takes-frank-martin"
-        target="_blank" rel="noopener"><cite>San Francisco Classical Voice</cite></a>
-    </figcaption>
-  </figure>
 
   {# The whole card links to the ticket page, or to Performances if there is
      none yet (see .next-concert in main.css). #}
