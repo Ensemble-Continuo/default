@@ -438,3 +438,23 @@ body:not(.is-home) .site-footer {
 body:not(.is-home) nav ul {
     background-color: transparent;
 }
+
+/* A soft crossfade when moving between the homepage and another page, in
+   browsers that support it (Chrome, Edge, Safari 18.2+). Moves between two
+   inner pages stay instant; see the script at the end of main.ntk. */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 400ms;
+    animation-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation: none;
+    }
+}
