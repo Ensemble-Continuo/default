@@ -174,7 +174,8 @@ img.banner {
     top: 16px;
     right: 16px;
     z-index: 998;
-    max-width: 460px;
+    /* Never wider than the space right of the 300px next-concert card. */
+    max-width: min(460px, calc(100% - 364px));
     margin: 0;
     padding: 18px 22px;
     border-radius: 8px;
@@ -212,6 +213,21 @@ img.banner {
 .video-quote a:hover {
     color: #fff;
     border-bottom-color: #fff;
+}
+
+/* Tablets: the quote shares the width with the card, so tighten it. */
+@media (max-width: 900px) {
+    .video-quote {
+        padding: 14px 16px;
+    }
+
+    .video-quote blockquote {
+        font-size: 19px;
+    }
+
+    .video-quote figcaption {
+        font-size: 13px;
+    }
 }
 
 /* Phones: across the top of the video, clear of the next-concert strip. */
