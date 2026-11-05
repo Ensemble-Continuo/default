@@ -20,5 +20,6 @@ layout: main.ntk
   src="https://collect.crowded.me/collection/02611810-f9f4-4ce2-a57e-3618e7b5a6c2/embedded-v2"
   frameborder="0"
   allowfullscreen
+  allow="payment https://collect.crowded.me https://collect.bankingcrowded.com"
   style="width:410px; max-width:100%; margin: 1.5rem auto; border-radius: 16px; box-shadow: 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.05), 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.05); border: none; display: block;"
 ></iframe>
