@@ -117,6 +117,18 @@
   {% if not noFooter %}
   {% include "footer.ntk" %}
   {% endif %}
+<script>
+  // Only fade when the homepage is on one side of the move.
+  window.addEventListener("pagereveal", function (e) {
+    if (!e.viewTransition) return;
+    var from = "";
+    try { from = new URL(document.referrer).pathname; } catch (err) {}
+    var sameSite = document.referrer.indexOf(location.origin) === 0;
+    if (!(sameSite && (location.pathname === "/" || from === "/"))) {
+      e.viewTransition.skipTransition();
+    }
+  });
+</script>
 </body>
 
 </html>
