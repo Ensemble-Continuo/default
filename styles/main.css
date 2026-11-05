@@ -167,6 +167,74 @@ img.banner {
 }
 
 
+/* Review quote overlaid on the top-right of the homepage video, level with
+   the next-concert card on the left, so it is visible without scrolling. */
+.video-quote {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 998;
+    max-width: 460px;
+    margin: 0;
+    padding: 18px 22px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    text-align: right;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.video-quote blockquote {
+    margin: 0;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.35;
+}
+
+.video-quote figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.video-quote figcaption::before {
+    content: "\2014\00a0";
+}
+
+.video-quote a,
+.video-quote a:visited {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.video-quote a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* Phones: across the top of the video, clear of the next-concert strip. */
+@media (max-width: 600px) {
+    .video-quote {
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        max-width: none;
+        padding: 12px 14px;
+        text-align: center;
+    }
+
+    .video-quote blockquote {
+        font-size: 17px;
+    }
+
+    .video-quote figcaption {
+        margin-top: 6px;
+        font-size: 12px;
+    }
+}
+
 #instruction {
     margin-top: 1em;
     font-size: 1em;
