@@ -427,14 +427,101 @@ img.banner {
 }
 
 /* Inner pages sit on a warm off-white, like a concert programme; the
-   homepage keeps its own white and dark sections. */
+   homepage keeps its own white and dark sections. The menu bar is warm on
+   every page, so it does not change as you move between them. */
 body:not(.is-home),
-body:not(.is-home) .navcontainer,
-body:not(.is-home) nav.stroke,
-body:not(.is-home) .site-footer {
+body:not(.is-home) .site-footer,
+.navcontainer,
+nav.stroke {
     background-color: #faf7f2;
 }
 
-body:not(.is-home) nav ul {
+nav ul {
     background-color: transparent;
+}
+
+/* Animated page changes, in browsers that support them (Chrome, Edge,
+   Safari 18.2+; others change pages as before). The menu bar stays still,
+   the homepage video and the page banners glide into each other, and the
+   rest of the page fades in. */
+@view-transition {
+    navigation: auto;
+}
+
+#rnb {
+    view-transition-name: site-nav;
+}
+
+#videoBackground.hero,
+.page-banner {
+    view-transition-name: hero;
+}
+
+::view-transition-group(hero) {
+    animation-duration: 650ms;
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+::view-transition-old(hero),
+::view-transition-new(hero) {
+    height: 100%;
+    object-fit: cover;
+    overflow: clip;
+    animation-duration: 650ms;
+}
+
+/* Text and cards over the photos animate on their own, so they are not
+   stretched or cropped while the photo changes size. */
+.hero__title {
+    view-transition-name: hero-title;
+}
+
+.hero .next-concert {
+    view-transition-name: hero-card;
+}
+
+.page-banner__inner {
+    view-transition-name: banner-title;
+}
+
+::view-transition-old(hero-title),
+::view-transition-old(hero-card),
+::view-transition-old(banner-title) {
+    animation: 200ms ease both page-fade-out;
+}
+
+::view-transition-new(hero-title),
+::view-transition-new(hero-card),
+::view-transition-new(banner-title) {
+    animation: 450ms 300ms cubic-bezier(0.2, 0.7, 0.2, 1) both page-rise;
+}
+
+::view-transition-group(hero-title),
+::view-transition-group(hero-card),
+::view-transition-group(banner-title) {
+    animation: none;
+}
+
+::view-transition-old(root) {
+    animation: 220ms ease both page-fade-out;
+}
+
+::view-transition-new(root) {
+    animation: 500ms 120ms cubic-bezier(0.2, 0.7, 0.2, 1) both page-rise;
+}
+
+@keyframes page-fade-out {
+    to { opacity: 0; }
+}
+
+@keyframes page-rise {
+    from { opacity: 0; transform: translateY(14px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none !important;
+    }
 }

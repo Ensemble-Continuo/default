@@ -49,12 +49,13 @@
   <div id="rnb">
     <div class="navcontainer">
       {# The homepage shows the name large over its video, so the menu bar there
-         has no logo; every other page links home with the lettering. #}
-      {% if page.url != "/" %}
+         has no logo; every other page links home with the lettering. The empty
+         slot keeps the menu in the same place on every page. #}
       <div class="home" id="header_logo">
+        {% if page.url != "/" %}
         <a href="/"><img class="nav-wordmark" src="/images/ec-wordmark.svg" alt="Ensemble Continuo, chamber choir — home" /></a>
+        {% endif %}
       </div>
-      {% endif %}
       <input type="checkbox" id="menu-toggle" class="menu-checkbox" aria-label="Toggle Navigation">
       <label for="menu-toggle" class="hamburger">&#9776;</label>
       <nav class="stroke">

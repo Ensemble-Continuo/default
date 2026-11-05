@@ -198,11 +198,3 @@ nav a:hover {
   height: 30px;
   width: auto;
 }
-
-/* Homepage: no logo in the menu bar, so centre the menu. */
-@media only screen and (min-width: 1301px) {
-  .is-home .navcontainer,
-  .is-home nav .pages ul {
-    justify-content: center;
-  }
-}
