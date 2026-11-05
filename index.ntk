@@ -77,6 +77,15 @@ noWrapper: true # Ensures video takes up remaining space with no padding
   </div>
 </div>
 <div id="videoBackground">
+  {# Review quote overlaid on the hero video (see .video-quote in main.css). #}
+  <figure class="video-quote">
+    <blockquote>&ldquo;It is rare to hear a performance of such artistry from a community choir.&rdquo;</blockquote>
+    <figcaption>
+      Jens Ibsen,
+      <a href="https://www.sfcv.org/articles/review/amateur-singers-uncommon-ambition-ensemble-continuo-takes-frank-martin"
+        target="_blank" rel="noopener"><cite>San Francisco Classical Voice</cite></a>
+    </figcaption>
+  </figure>
   <video id="bgVideo" autoplay muted playsinline loop preload="auto" poster="/images/and_the_swallow_cover.jpg"
     onclick="toggleMute()">
     <source src="/videos/and_the_swallow.webm" type="video/webm">
