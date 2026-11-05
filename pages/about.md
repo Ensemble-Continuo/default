@@ -31,6 +31,8 @@ Ensemble Continuo is currently the choir-in-residence at All Saints’ Episcopal
 
 Founder and musical director of Ensemble Continuo, Christopher Pluntke, graduated from the Hochschule für Musik Würzburg in 2007 and has 25 years of experience leading vocal ensembles, period instrument groups, and performing as organist, pianist and continuo player. After obtaining his PhD at UCL, he moved to the Bay Area, where he has been active as conductor, pianist, and organist. He has served as music director and organist at All Saints' Episcopal Church in Palo Alto since January 2025.
 
+Read more about Christopher, and hear his organ recordings, at [christopherpluntke.com](https://christopherpluntke.com).
+
 <p class="about-media-link"><a href="/media">Watch our concert recordings and see photos from our performances &rarr;</a></p>
 
 [SFCV Martin review]: https://www.sfcv.org/articles/review/amateur-singers-uncommon-ambition-ensemble-continuo-takes-frank-martin
