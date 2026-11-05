@@ -7,11 +7,6 @@
   padding: 0 24px 40px;
   position: relative;
   z-index: 100;
-  /* Matches .navcontainer in navbar.css. This site is not mobile-responsive —
-     the navbar forces an 840px floor and the page scrolls horizontally below
-     that — so the footer holds the same floor rather than collapsing to one
-     column while the rest of the page stays wide. */
-  min-width: 840px;
 }
 
 .site-footer__inner {
@@ -139,4 +134,12 @@
   align-items: baseline;
   font-size: 13px;
   color: #6b6b6b;
+}
+
+/* Phones: stack the two columns so the footer fits the screen. */
+@media (max-width: 700px) {
+  .site-footer__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
 }
