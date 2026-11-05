@@ -38,6 +38,19 @@ nav .pages li {
   padding: 0 30px;
 }
 
+/* Keep two-word items like "About us" on one line. */
+nav .pages h3 {
+  white-space: nowrap;
+}
+
+/* With eight items the menu needs tighter spacing just above the width
+   where it collapses into the hamburger menu. */
+@media only screen and (min-width: 1301px) and (max-width: 1500px) {
+  nav .pages li {
+    padding: 0 16px;
+  }
+}
+
 nav .pages {
   width: 100%;
 }

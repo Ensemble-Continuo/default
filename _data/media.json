@@ -1,0 +1,120 @@
+{
+  "videos": [
+    {
+      "id": "y0RJF7HMSis",
+      "title": "Händel: Dixit Dominus",
+      "meta": "with the Ensemble Continuo Baroque Orchestra · All Saints', Palo Alto · April 2026",
+      "duration": "6:21"
+    },
+    {
+      "id": "-TzWNE7rbUc",
+      "title": "Poulenc: Gloria",
+      "meta": "Holy Name Cathedral, Chicago · June 2025",
+      "duration": "25:42"
+    },
+    {
+      "id": "IfXHkO8XKhQ",
+      "title": "Caroline Shaw: and the swallow",
+      "meta": "Cathedral of Christ the Light, Oakland · 2025",
+      "duration": "4:01"
+    },
+    {
+      "id": "hPp2JHRpN6M",
+      "title": "Schütz: Die Himmel erzählen die Ehre Gottes",
+      "meta": "All Saints', Palo Alto · 2025",
+      "duration": "4:46"
+    },
+    {
+      "id": "WmOHEXc95ow",
+      "title": "Duruflé: Requiem, Op. 9",
+      "meta": "Cathedral of Christ the Light, Oakland · May 2024",
+      "duration": "40:53"
+    },
+    {
+      "id": "GHOaUW5nDYM",
+      "title": "Ešenvalds: Stars",
+      "meta": "California Theatre, San José · October 2023",
+      "duration": "4:37"
+    },
+    {
+      "id": "JYaDm7z1Iw4",
+      "title": "A. R. Rahman: Jai Ho",
+      "meta": "arr. Ethan Sperry · California Theatre, San José · October 2023",
+      "duration": "4:23"
+    },
+    {
+      "id": "1xTCGnBbcfw",
+      "title": "Finzi: My spirit sang all day",
+      "meta": "Stanford Memorial Church · July 2023",
+      "duration": "1:44"
+    },
+    {
+      "id": "iJXkBfWw5fY",
+      "title": "Mendelssohn: Jauchzet dem Herrn",
+      "meta": "Stanford Memorial Church · July 2023",
+      "duration": "4:09"
+    },
+    {
+      "id": "oIpcmuQH59U",
+      "title": "Ticheli: Earth Song",
+      "meta": "Stanford Memorial Church · July 2023",
+      "duration": "3:27"
+    },
+    {
+      "id": "wVkyYFonD2U",
+      "title": "Palestrina: Kyrie from Missa Papae Marcelli",
+      "meta": "2023",
+      "duration": "4:39"
+    },
+    {
+      "id": "1gzOVvlYfc4",
+      "title": "Rachmaninoff: Bogoroditse Devo",
+      "meta": "2023",
+      "duration": "2:22"
+    },
+    {
+      "id": "ii3sdyxaSp8",
+      "title": "Brahms: Ein deutsches Requiem, II",
+      "meta": "Union Church of Cupertino · May 2023",
+      "duration": "12:55"
+    }
+  ],
+  "photos": [
+    {
+      "file": "stanford-memorial-church.jpg",
+      "caption": "Stanford Memorial Church"
+    },
+    {
+      "file": "oakland-group-2026.jpg",
+      "caption": "Cathedral of Christ the Light, Oakland · 2026"
+    },
+    {
+      "file": "singing-close.jpg",
+      "caption": "In concert"
+    },
+    {
+      "file": "chicago-holy-name.jpg",
+      "caption": "First tour: Holy Name Cathedral, Chicago · 2025"
+    },
+    {
+      "file": "messiah-orchestra.jpg",
+      "caption": "Messiah Sing-Along · All Saints'"
+    },
+    {
+      "file": "conducting-camera.jpg",
+      "caption": "Christopher Pluntke conducting"
+    },
+    {
+      "file": "california-theatre.jpg",
+      "caption": "California Theatre, San José"
+    },
+    {
+      "file": "all-saints-easter.jpg",
+      "caption": "All Saints', Palo Alto"
+    },
+    {
+      "file": "messiah-singers.jpg",
+      "caption": "Messiah Sing-Along"
+    }
+  ]
+}
