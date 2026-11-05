@@ -53,6 +53,18 @@ export default function (eleventyConfig) {
     });
   });
 
+  // "Sat, Nov 14 · 7:00 pm" for the homepage's next-concert card.
+  eleventyConfig.addFilter("concertWhen", (perf) => {
+    const day = perf.startsAt.toLocaleDateString("en-US", {
+      weekday: "short", month: "short", day: "numeric"
+    });
+    if (perf.timeTBD) return day;
+    const time = perf.startsAt.toLocaleTimeString("en-US", {
+      hour: "numeric", minute: "2-digit"
+    }).toLowerCase();
+    return `${day} · ${time}`;
+  });
+
   ////////////////////////////////////////////////
 
   return {

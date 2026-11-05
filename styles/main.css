@@ -93,11 +93,6 @@ img.banner {
 
 }
 
-.toast {
-    font-family: 'Palatino Linotype', Palatino, serif;
-    margin: .8rem;
-}
-
 .alert-link {
     color: #3D8294;
 }
@@ -153,15 +148,6 @@ img.banner {
     overflow: hidden;
 }
 
-/* Pins the "next concert" toast to the top-left of the hero video. The .toast
-   margin below supplies the inset, matching where it sat when the video was
-   fixed. */
-#videoBackground .toast {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 #bgVideo {
     object-fit: cover; /* cover entire viewport */
     object-position: top center;
@@ -196,11 +182,169 @@ img.banner {
     z-index: 9999;   /* Ensures the iframe stays on top of other elements */
 }
 
-.next-show-header{
-background-color: #F9E076;
-  color: #333;
-}
-
 #maintext {
     padding-top: 70px;
+}
+/* Next-concert card pinned over the hero video on the homepage. */
+.next-concert {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 999;
+    width: 300px;
+    font-family: 'Palatino Linotype', Palatino, serif;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.next-concert:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.42);
+}
+
+.next-concert__link,
+.next-concert__link:visited,
+.next-concert__link:hover {
+    display: block;
+    color: #1a1a1a;
+}
+
+.next-concert__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.next-concert__body {
+    padding: 14px 18px 18px;
+}
+
+.next-concert__eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: #F9E076;
+    color: #333;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.next-concert__title {
+    font-size: 21px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.next-concert__when,
+.next-concert__where {
+    font-size: 14px;
+    line-height: 1.45;
+    color: #555;
+}
+
+.next-concert__cta {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 9px 16px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background 160ms ease;
+}
+
+.next-concert__link:hover .next-concert__cta {
+    background: #444;
+}
+
+/* Sits in the white area just below the 16:9 image, not over the artwork. */
+.next-concert__close {
+    position: absolute;
+    top: calc(300px * 9 / 16 + 8px);
+    right: 8px;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: #666;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.next-concert__close:hover {
+    background: #eee;
+    color: #111;
+}
+
+/* Phones: a compact strip across the bottom of the hero, with the whole
+   16:9 image as a thumbnail on the left so title artwork is not cropped. */
+@media (max-width: 600px) {
+    .next-concert {
+        top: auto;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+    }
+
+    .next-concert__link {
+        display: flex;
+        align-items: center;
+    }
+
+    .next-concert__img {
+        width: 44%;
+        margin: 8px 0 8px 8px;
+        border-radius: 6px;
+        flex-shrink: 0;
+    }
+
+    .next-concert__body {
+        padding: 8px 30px 10px 12px;
+    }
+
+    .next-concert__eyebrow {
+        margin-bottom: 4px;
+        font-size: 10px;
+    }
+
+    .next-concert__title {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+    .next-concert__when,
+    .next-concert__where {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+
+    .next-concert__cta {
+        margin-top: 8px;
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .next-concert__close {
+        top: 4px;
+        right: 4px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 18px;
+    }
 }

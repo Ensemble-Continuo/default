@@ -83,29 +83,26 @@ noWrapper: true # Ensures video takes up remaining space with no padding
     Your browser does not support HTML5 video.
   </video>
 
-  {# Lives inside #videoBackground so it stays pinned over the hero. It used to
-     sit here visually only because the video was position:fixed and out of
-     flow; now that the video flows (to make room for the footer), the toast
-     needs a real anchor or it drops down onto the footer. #}
+  {# Pinned over the hero video (see .next-concert in main.css). The whole
+     card links to the ticket page, or to Performances if there is none yet. #}
   {% set upcoming = performances | upcomingPerfs %}
   {% if upcoming | length > 0 %}
   {% set nextPerf = upcoming | first %}
-  <div style="z-index:999" class="toast float-left fade show" role="alert" aria-live="assertive" aria-atomic="true"
-    data-autohide="false" data-animation="true">
-    <div class="toast-header next-show-header">
-      Next concert: &nbsp;
-      <strong class="mr-auto">
-        <a style="color: #333" href="/performances">{{ nextPerf.title }}</a>
-      </strong>
-      <button type="button" class="ml-2 mb-1 close" aria-label="Close"
-        onclick="this.closest('.toast').remove()">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="toast-body">
-      <a href="/performances">{{ nextPerf.startsAt | mmm_dd_yyyy }} - {{ nextPerf.location }}</a>
-    </div>
-  </div>
+  <aside class="next-concert" aria-label="Next concert">
+    <button type="button" class="next-concert__close" aria-label="Hide next concert"
+      onclick="this.closest('.next-concert').remove()">&times;</button>
+    <a class="next-concert__link"
+      {% if nextPerf.ticketsUrl %}href="{{ nextPerf.ticketsUrl }}" target="_blank" rel="noopener"{% else %}href="/performances"{% endif %}>
+      <img class="next-concert__img" src="{{ nextPerf.imgUrl }}" alt="">
+      <div class="next-concert__body">
+        <div class="next-concert__eyebrow">Next concert</div>
+        <div class="next-concert__title">{{ nextPerf.title }}</div>
+        <div class="next-concert__when">{{ nextPerf | concertWhen }}</div>
+        <div class="next-concert__where">{{ nextPerf.location }}</div>
+        <span class="next-concert__cta">{{ "Get tickets" if nextPerf.ticketsUrl else "See details" }} &rarr;</span>
+      </div>
+    </a>
+  </aside>
   {% endif %}
 </div>
 
