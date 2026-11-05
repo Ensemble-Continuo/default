@@ -45,7 +45,7 @@
   {% endblock %}
 </head>
 
-<body class="{{ 'is-home' if page.url == '/' }}" onload="document.body.style.opacity='1'">
+<body class="{{ 'is-home' if page.url == '/' }}{{ ' has-banner' if banner }}" onload="document.body.style.opacity='1'">
   <div id="rnb">
     <div class="navcontainer">
       {# The homepage shows the name large over its video, so the menu bar there
@@ -89,6 +89,20 @@
       </nav>
     </div>
   </div>
+  {# Inner pages open with a choir photograph and the page title over it.
+     Set "banner" (an image path) and "bannerTitle" in a page's front matter;
+     "bannerPosition" moves the crop, e.g. "50% 30%". #}
+  {% if banner %}
+  <header class="page-banner">
+    <img src="{{ banner }}" alt="" style="object-position: {{ bannerPosition or 'center' }}">
+    <div class="page-banner__inner">
+      <div class="container">
+        <p class="page-banner__eyebrow">Ensemble Continuo</p>
+        <h1>{{ bannerTitle }}</h1>
+      </div>
+    </div>
+  </header>
+  {% endif %}
   {% block content %}
   {% if noWrapper %}
   {{ content | safe }}

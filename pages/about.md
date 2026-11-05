@@ -2,9 +2,10 @@
 layout: main.ntk
 title: "About Our Bay Area Choir | Ensemble Continuo"
 description: "Founded in 2023, Ensemble Continuo is an auditioned chamber choir singing choral masterworks from the Renaissance to the present across the Bay Area."
+banner: /images/media/singing-close.jpg
+bannerPosition: "50% 28%"
+bannerTitle: About us
 ---
-
-# About Us
 
 Ensemble Continuo is an adult classical chamber choir based in Palo Alto, California. The choir is committed to artistic excellence: performing challenging, diverse, and rarely-performed works.
 

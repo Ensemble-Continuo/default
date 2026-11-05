@@ -2,13 +2,14 @@
 title: "Join Our Adult Choir — Auditions | Ensemble Continuo"
 description: "We audition experienced singers year-round. Rehearsals are Thursday evenings in Palo Alto. Find out how to arrange an audition with our chamber choir."
 layout: main.ntk
+banner: /images/media/all-saints-easter.jpg
+bannerPosition: "50% 45%"
+bannerTitle: Sing with us
 ---
 {% block headTags %}
 <link rel="stylesheet" type="text/css" href="{{ '/styles/join_us.css' | fingerprint }}">
 {% endblock %}
 
-<h1>Sing with Ensemble Continuo</h1>
-<hr>
 <p>
     Ensemble Continuo is a chamber choir comprised primarily of adults based in Palo Alto, California. We welcome experienced youth and adult singers of all voice parts (Soprano, Alto, Tenor, Bass) who share a passion for singing challenging classical repertoire in a supportive setting. Rehearsals take place Thursday evenings in Palo Alto.
 </p>

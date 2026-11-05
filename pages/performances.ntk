@@ -2,6 +2,9 @@
 title: "Choir Concerts in the Bay Area | Ensemble Continuo"
 description: "Upcoming concerts and past programmes from Ensemble Continuo, a Bay Area chamber choir, with venues, dates and ticket links."
 layout: main.ntk
+banner: /images/media/stanford-memorial-church.jpg
+bannerPosition: "50% 70%"
+bannerTitle: Performances
 ---
 
 {% block headTags %}

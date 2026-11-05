@@ -2,17 +2,17 @@
 title: "Our Singers | Ensemble Continuo"
 description: "Meet the singers and conductor of Ensemble Continuo, a chamber choir drawn from across Palo Alto, the Peninsula and Silicon Valley."
 layout: main.ntk
-noWrapper: true
+banner: /images/media/oakland-group-2026.jpg
+bannerPosition: "50% 40%"
+bannerTitle: Our singers
 ---
 
 {% block headTags %}
 <link rel="stylesheet" type="text/css" href="{{ '/styles/members.css' | fingerprint }}">
 {% endblock %}
 
-<div class="parallax"></div>
-
-<div id="maintext" class="container">
-  <p>Christopher Pluntke, <i>conductor</i></p>
+<div class="members">
+  <p class="members__conductor">Christopher Pluntke, <i>conductor</i></p>
   <table id="members">
     <tr>
       <td><i>Soprano</i></td>
@@ -69,4 +69,3 @@ noWrapper: true
     </tr>
   </table>
 </div>
-<div class="parallax"></div>

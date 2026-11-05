@@ -39,13 +39,9 @@ nav ul {
 }
 
 .container {
-    background-color: white;
     font-family: 'Palatino Linotype', Palatino, serif;
 }
 
-.container h1 {
-    text-align: center;
-}
   
 .ml2 .letter {
     display: inline-block;
