@@ -11,7 +11,7 @@
 .hero__shade {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.15) 45%, transparent 70%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 50%, transparent 80%);
     pointer-events: none;
 }
 
@@ -41,9 +41,51 @@
     filter: brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0, 0, 0, 0.45));
 }
 
-.hero__title p {
-    margin: 0 0 16px;
+/* Small line above the name. */
+.hero__place {
+    display: inline-block;
+    margin: 0 0 12px;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Review quote directly under the name. */
+.hero__quote {
+    max-width: 620px;
+    margin: 0 auto 18px;
+}
+
+.hero__quote blockquote {
+    margin: 0;
+    text-wrap: balance;
     font-size: 22px;
+    font-style: italic;
+    line-height: 1.35;
+}
+
+.hero__quote figcaption {
+    margin-top: 6px;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.hero__quote figcaption::before {
+    content: "\2014\00a0";
+}
+
+.hero__quote a,
+.hero__quote a:visited {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    pointer-events: auto;
+}
+
+.hero__quote a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
 }
 
 .sound-pill {
@@ -293,8 +335,7 @@
         margin-bottom: 12px;
     }
 
-    .hero__title p {
-        margin-bottom: 12px;
+    .hero__quote blockquote {
         font-size: 19px;
     }
 }
@@ -306,8 +347,8 @@
     }
 }
 
-/* Phones: the name sits at the top of the video, the next-concert strip at
-   the bottom; the review quote is left to the About and Media pages. */
+/* Phones: the name and quote sit at the top of the video, the next-concert
+   strip at the bottom. */
 @media (max-width: 600px) {
     #videoBackground.hero {
         height: calc(100svh - 65px);
@@ -322,12 +363,26 @@
         bottom: auto;
     }
 
-    .hero__title p {
-        font-size: 16px;
+    .hero__place {
+        margin-bottom: 8px;
+        font-size: 11px;
+        letter-spacing: 0.22em;
     }
 
-    .hero .video-quote {
-        display: none;
+    .hero__wordmark {
+        margin-bottom: 14px;
+    }
+
+    .hero__quote {
+        margin-bottom: 14px;
+    }
+
+    .hero__quote blockquote {
+        font-size: 17px;
+    }
+
+    .hero__quote figcaption {
+        font-size: 12px;
     }
 
     .sound-pill {
