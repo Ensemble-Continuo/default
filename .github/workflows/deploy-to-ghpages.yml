@@ -9,6 +9,13 @@ on:
       - main
   pull_request:         # builds only; the deploy step below is skipped
 
+# One deploy at a time. Two releases close together used to deploy at once,
+# and one would time out and email a failure; now the second waits its turn.
+# Each pull request gets its own group, so their build checks never wait.
+concurrency:
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.number) || 'pages' }}
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

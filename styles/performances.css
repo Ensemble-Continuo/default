@@ -34,11 +34,86 @@ h2 {
     margin-bottom: 1.0rem;
 }
 
-form {
-    text-align: center;
-    padding-top: 10px;
-    border-radius: 10px;
-    background-color: #f2ece1;
+/* Mailing-list sign-up at the top of the page. */
+.signup-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 32px;
+    margin: 8px 0 40px;
+    padding: 24px 28px;
+    border: 1px solid #e6dfd2;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.signup-box__title {
+    margin: 0 0 2px;
+    font-size: 22px;
+}
+
+.signup-box__text p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+}
+
+.signup-box__field {
+    display: flex;
+    flex: 1 1 340px;
+    min-width: 0;
+    max-width: 460px;
+}
+
+@media (max-width: 600px) {
+    .signup-box {
+        padding: 20px;
+    }
+
+    .signup-box__field {
+        flex-basis: 100%;
+        max-width: none;
+    }
+
+    .signup-box__field button {
+        padding: 10px 14px;
+    }
+}
+
+.signup-box__field input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 14px;
+    border: 1px solid #c9c1b3;
+    border-right: 0;
+    border-radius: 0;
+    background: #fff;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.signup-box__field input:focus {
+    outline: 2px solid #1a1a1a;
+    outline-offset: -2px;
+}
+
+.signup-box__field button {
+    padding: 10px 20px;
+    border: 1px solid #1a1a1a;
+    background: #1a1a1a;
+    color: #fff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.signup-box__field button:hover {
+    background: #444;
 }
 
 .card {
