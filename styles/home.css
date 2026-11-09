@@ -343,9 +343,8 @@
     background: #faf7ef;
 }
 
-.home-signup p {
-    color: #555;
-    font-size: 17px;
+.home-signup h2 {
+    margin-bottom: 18px;
 }
 
 .home-signup .home-btn {

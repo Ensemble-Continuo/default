@@ -50,14 +50,8 @@ h2 {
 }
 
 .signup-box__title {
-    margin: 0 0 2px;
-    font-size: 22px;
-}
-
-.signup-box__text p {
     margin: 0;
-    color: #666;
-    font-size: 15px;
+    font-size: 22px;
 }
 
 .signup-box__field {

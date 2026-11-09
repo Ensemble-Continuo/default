@@ -143,8 +143,7 @@ noWrapper: true # Ensures video takes up remaining space with no padding
 
 <section class="home-section home-signup">
   <div class="container">
-    <h2>Hear about our next concert first</h2>
-    <p>A short email before each concert.</p>
+    <h2>Hear about our upcoming performances</h2>
     <a class="home-btn" href="https://ensemble-continuo.us22.list-manage.com/subscribe?u=fdf6765d2687403e924ccc48f&amp;id=b637d06d3f"
       target="_blank" rel="noopener">Join our mailing list</a>
     <a class="home-btn home-btn--ghost" href="/auditions">Sing with us</a>
