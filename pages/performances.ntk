@@ -128,8 +128,7 @@ bannerTitle: Performances
 <form class="signup-box" action="https://ensemble-continuo.us22.list-manage.com/subscribe/post?u=fdf6765d2687403e924ccc48f&amp;id=b637d06d3f&amp;f_id=00cac0e1f0"
   method="post" target="_self">
   <div class="signup-box__text">
-    <h2 class="signup-box__title">Hear about our next concert first</h2>
-    <p>A short email before each concert.</p>
+    <h2 class="signup-box__title">Hear about our upcoming performances</h2>
   </div>
   <div class="signup-box__field">
     <label class="sr-only" for="mce-EMAIL">Email address</label>
