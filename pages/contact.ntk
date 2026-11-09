@@ -24,7 +24,7 @@ bannerTitle: Contact us
 <form action="https://formspree.io/f/xeqwlood" method="POST">
     <div class="formrow">
         <label>Your email:<br />
-            <input type="email" name="email" required size="50">
+            <input type="email" name="email" required autocomplete="email">
         </label>
     </div>
     <div class="formrow">

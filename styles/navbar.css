@@ -206,3 +206,14 @@ nav a:hover {
     justify-content: center;
   }
 }
+
+/* Smallest phones: keep the lettering clear of the menu button. */
+@media (max-width: 360px) {
+  .nav-wordmark {
+    height: 24px;
+  }
+
+  #header_logo {
+    padding-left: 16px;
+  }
+}

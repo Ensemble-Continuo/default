@@ -87,3 +87,43 @@ nav ul {
     margin: 0 auto;
     border: none;
 }
+
+/* Contact form: fields fill the column, never wider than the screen. */
+.formrow input[type="email"],
+.formrow textarea {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #c9c1b3;
+    background: #fff;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.formrow label {
+    display: block;
+    width: 100%;
+}
+
+.formrow button {
+    padding: 10px 22px;
+    border: 1px solid #1a1a1a;
+    background: #1a1a1a;
+    color: #fff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.formrow button:hover {
+    background: #444;
+}
+
+.formrow:last-child {
+    margin-bottom: 40px;
+}

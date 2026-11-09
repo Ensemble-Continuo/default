@@ -36,6 +36,8 @@
   height: 44px;
   width: auto;
   display: block;
+  /* The logo file has a white background; let the page colour show through. */
+  mix-blend-mode: multiply;
 }
 
 .site-footer__wordmark {
