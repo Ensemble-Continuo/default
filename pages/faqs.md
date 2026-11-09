@@ -14,7 +14,7 @@ bannerTitle: FAQs
 2. What is the artistic style or "signature sound" of the group?
    - We are a classical ensemble. We look for voices that can blend seamlessly into a unified cathedral-style sound, rather than soloistic or pop-style vocal production.
 3. What type of music does the choir sing? 
-   - We perform a cappella and accompanied works spanning from the Renaissance to modern compositions. Our repertoire is thoughtfully curated for each concert cycle, and prospective singers can view the current season's music list on the “Rehearsal Plan”, linked under the "Join Us" page of our website.
+   - We perform a cappella and accompanied works spanning from the Renaissance to modern compositions. Our repertoire is thoughtfully curated for each concert cycle, and prospective singers can view the current season's music list on our [Rehearsal Plan](https://docs.google.com/document/d/1sacz6N5gf-NvQ7pQgmE5ZFTiLOJAIvhdHJmlj9_pyXo/view), also linked from the [Join us](/auditions) page.
 4. What is a typical rehearsal like? 
    - Each rehearsal is designed to be both productive and musically fulfilling. We begin with a 30-minute group vocal coaching session focused on healthy technique and blending our sound. The remainder of the time is spent rehearsing our repertoire,  occasionally breaking into sectionals to master more intricate passages in a collaborative setting.  While we tackle complex repertoire, the atmosphere is supportive, friendly, and fun.
 5. What is your performance schedule for the year?
