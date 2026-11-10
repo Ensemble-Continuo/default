@@ -18,12 +18,6 @@
     color: #ccc;
 }
 
-.media-intro {
-    max-width: 640px;
-    font-size: 19px;
-    color: #bbb;
-}
-
 .screening__layout {
     display: grid;
     grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
@@ -381,10 +375,6 @@
 
     .screening h1 {
         font-size: 32px;
-    }
-
-    .media-intro {
-        font-size: 17px;
     }
 
     .playlist__item,
