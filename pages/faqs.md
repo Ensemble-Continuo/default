@@ -7,6 +7,8 @@ bannerPosition: "50% 72%"
 bannerTitle: FAQs
 ---
 
+<div class="faq">
+
 ## About the Ensemble
 
 1. How large is the choir?
@@ -36,3 +38,5 @@ bannerTitle: FAQs
    - To maintain our high standard of performance, attendance is crucial. We generally allow a maximum of two absences per concert cycle.  We also prioritize punctuality to respect everyone's time.
 3. What is the typical tenure of a singer?
    - We have a very dedicated membership! Our core group has been singing with the choir since its inception, and most singers stay for multiple seasons, building strong musical relationships within the ensemble.
+
+</div>

@@ -458,3 +458,72 @@ body:not(.is-home) nav ul {
         animation: none;
     }
 }
+
+/* FAQ page: each section is a list of questions with the answer beneath.
+   The content stays a plain Markdown list in pages/faqs.md. */
+.faq {
+    max-width: 760px;
+    padding-bottom: 56px;
+}
+
+.faq h2 {
+    margin: 48px 0 6px;
+    color: #8a6d00;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.faq h2:first-child {
+    margin-top: 8px;
+}
+
+.faq ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* The question. */
+.faq ol > li {
+    padding: 22px 0;
+    border-bottom: 1px solid #e3dccf;
+    font-size: 22px;
+    line-height: 1.3;
+    color: #1a1a1a;
+}
+
+/* The answer. */
+.faq ol > li > ul {
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.faq ol > li > ul > li {
+    font-size: 17px;
+    line-height: 1.65;
+    color: #444;
+}
+
+.faq a,
+.faq a:visited {
+    color: #1a1a1a;
+    border-bottom: 1px solid #999;
+}
+
+.faq a:hover {
+    border-bottom-color: #1a1a1a;
+}
+
+@media (max-width: 600px) {
+    .faq ol > li {
+        padding: 18px 0;
+        font-size: 19px;
+    }
+
+    .faq ol > li > ul > li {
+        font-size: 16px;
+    }
+}
