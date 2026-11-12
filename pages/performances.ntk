@@ -42,10 +42,14 @@ bannerTitle: Performances
       "name": {{ site.name | dump | safe }},
       "url": {{ site.url | dump | safe }}
     }
-    {%- if perf.ticketsUrl %},
+    {%- if perf.ticketsUrl or perf.free %},
     "offers": {
       "@type": "Offer",
-      "url": {{ perf.ticketsUrl | dump | safe }},
+      "url": {{ (perf.ticketsUrl or site.url + "/performances") | dump | safe }},
+      {%- if perf.free %}
+      "price": 0,
+      "priceCurrency": "USD",
+      {%- endif %}
       "availability": "https://schema.org/InStock"
     }
     {%- endif %}

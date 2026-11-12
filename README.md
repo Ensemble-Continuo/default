@@ -34,6 +34,7 @@ Announce the concert now, add real artwork whenever it is ready.
   - concertProgramUrl: adds a link to the program in the description
   - locationUrl: not required but recommended. Link to Google Maps or a website for the venue.
   - ticketsUrl: not required but strongly recommended
+  - free: set to `true` for free-admission events. Tells search engines the event is free; ticketsUrl can still be set (e.g. a free Eventbrite registration).
   - timeTBD: set to `true` only if the start time genuinely is not settled yet
 
 ##### About the date

@@ -1,6 +1,7 @@
 [
   {
     "title": "Memorial Church in 360°",
+    "free": true,
     "imgUrl": "/images/2612_memorial_church_360.jpg",
     "date": "December 6, 2026 2:00 pm",
     "location": "Stanford Memorial Church",
@@ -17,6 +18,7 @@
   },
   {
     "title": "Messiah Sing-Along",
+    "free": true,
     "imgUrl": "/images/2612_messiah_sing_along.jpg",
     "date": "December 18, 2026 7:30 pm",
     "location": "All Saints' Episcopal Church",
