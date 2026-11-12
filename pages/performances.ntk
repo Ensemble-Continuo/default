@@ -84,7 +84,7 @@ bannerTitle: Performances
       <p class="card-text">{{ perf.description | safe }}</p>
 
       {% if perf.ticketsUrl and perf.category == "upcoming" %}
-      <p><a href="{{ perf.ticketsUrl }}" id="link" class="card-link" target="_blank">Reserve a seat</a>.</p>
+      <p><a href="{{ perf.ticketsUrl }}" id="link" class="card-link" target="_blank">Get a ticket</a>.</p>
       {% endif %}
 
       {% if perf.concertProgramUrl %}
